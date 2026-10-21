@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מחולל כתבות מהעתיד - 2036 | כפולות מגזין לסטודנטים</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts for Authentic Hebrew Editorial & Brutalist Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@300;400;600;700;800&family=Courier+Prime:wght@400;700&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700;900&family=Karantina:wght@400;700&family=Rubik:ital,wght@0,400;0,600;0,800;1,400&family=Secular+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- html2canvas for 1-Click High-Res PNG Export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    :root {
+      --accent-color: #2d5a4c;
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+
+    /* Typography Helpers */
+    .font-serif-he { font-family: 'Frank Ruhl Libre', serif; }
+    .font-sans-he { font-family: 'Heebo', sans-serif; }
+    .font-assistant { font-family: 'Assistant', sans-serif; }
+    .font-condensed-he { font-family: 'Karantina', sans-serif; }
+    .font-display-he { font-family: 'Secular One', sans-serif; }
+    .font-hand-he { font-family: 'Amatic SC', cursive; }
+    .font-mono-he { font-family: 'Courier Prime', 'Space Mono', monospace; }
+
+    /* Classic Editorial Drop Caps for RTL Hebrew */
+    .hebrew-drop-cap::first-letter {
+      float: right;
+      font-size: 3.35rem;
+      line-height: 0.78;
+      padding-left: 0.55rem;
+      padding-top: 0.1rem;
+      font-weight: 900;
+      font-family: 'Frank Ruhl Libre', serif;
+      color: #0f172a;
+    }
+
+    .hebrew-gold-drop-cap::first-letter {
+      float: right;
+      font-size: 3.45rem;
+      line-height: 0.78;
+      padding-left: 0.55rem;
+      padding-top: 0.12rem;
+      font-weight: 900;
+      font-family: 'Frank Ruhl Libre', serif;
+      color: #b47b38;
+    }
+
+    /* Realistic Magazine Center Spine / Gutter Shadow */
+    .magazine-gutter-right {
+      background: linear-gradient(to right, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.06) 38%, rgba(0,0,0,0) 100%);
+    }
+    .magazine-gutter-left {
+      background: linear-gradient(to left, rgba(0,0,0,0.18) 0%, rgba(255,255,255,0.28) 24%, rgba(0,0,0,0) 100%);
+    }
+
+    /* Plastikcomb Hollow Outlined Text */
+    .outline-text-white {
+      color: transparent;
+      -webkit-text-stroke: 1.15px rgba(255, 255, 255, 0.92);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    /* Print Media Query for Clean A3/A4 Landscape Double-Page Spread */
+    @media print {
+      @page {
+        size: A3 landscape;
+        margin: 0;
+      }
+      body, html {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      #preview-stage {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: white !important;
+        overflow: visible !important;
+        display: block !important;
+        width: 100vw !important;
+        height: 100vh !important;
+      }
+      #magazine-spread-canvas {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col select-none">
+
+  <!-- TOP NAVIGATION & EXPORT TOOLBAR -->
+  <header class="no-print bg-slate-950/95 border-b border-slate-800 px-4 lg:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 sticky top-0 z-40 backdrop-blur-md">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center shadow-lg shadow-emerald-500/20 text-white font-black text-lg">
+        36
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="font-bold text-base lg:text-lg tracking-tight text-white">מחולל כתבות מהעתיד — 2036</h1>
+          <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            9 תבניות כפולה (כולל Eye ו-Plastikcomb)
+          </span>
+        </div>
+        <p class="text-xs text-slate-400 hidden sm:block">
+          כלי לעיצוב כפולת מגזין עיתונאית (עמוד ימין 24 + עמוד שמאל 25) לתרגיל סטודנטים — 10 שנים קדימה
+        </p>
+      </div>
+    </div>
+
+    <!-- View Mode Switcher & Zoom -->
+    <div class="flex items-center gap-2 bg-slate-900 p-1 rounded-xl border border-slate-800">
+      <button onclick="setSpreadViewMode('spread')" id="view-btn-spread" class="px-3 py-1.5 rounded-lg text-xs font-bold transition bg-emerald-500 text-slate-950 cursor-pointer">
+        כפולה מלאה (2 עמודים)
+      </button>
+      <button onclick="setSpreadViewMode('right')" id="view-btn-right" class="px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800 cursor-pointer">
+        עמוד ימין (24)
+      </button>
+      <button onclick="setSpreadViewMode('left')" id="view-btn-left" class="px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800 cursor-pointer">
+        עמוד שמאל (25)
+      </button>
+      <div class="h-4 w-[1px] bg-slate-700 mx-1 hidden sm:block"></div>
+      <div class="hidden sm:flex items-center gap-1 px-1">
+        <button onclick="adjustZoom(-10)" class="w-6 h-6 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold flex items-center justify-center cursor-pointer" title="הקטן תצוגה">−</button>
+        <span id="zoom-label" class="text-[11px] font-mono text-slate-300 w-10 text-center">95%</span>
+        <button onclick="adjustZoom(10)" class="w-6 h-6 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold flex items-center justify-center cursor-pointer" title="הגדל תצוגה">+</button>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex items-center gap-2">
+      <button onclick="saveToLocal()" id="save-btn" class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold transition cursor-pointer">
+        <span>💾 שמור טיוטה</span>
+      </button>
+      <button onclick="exportSpreadAsPNG()" id="png-export-btn" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/25 transition cursor-pointer">
+        <span>🖼️ שמירה כתמונה (PNG)</span>
+      </button>
+      <button onclick="printSpread()" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-lg shadow-emerald-500/20 transition cursor-pointer">
+        <span>🖨️ הדפסה / PDF</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE TAB BAR -->
+  <div class="no-print lg:hidden flex border-b border-slate-800 bg-slate-900">
+    <button onclick="switchMobilePane('editor')" id="mob-btn-editor" class="flex-1 py-2.5 text-xs font-bold border-b-2 border-emerald-500 text-emerald-400 bg-slate-800/40">
+      ✏️ עריכת תוכן ותבניות
+    </button>
+    <button onclick="switchMobilePane('preview')" id="mob-btn-preview" class="flex-1 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400">
+      👁️ תצוגת הכפולה החיה
+    </button>
+  </div>
+
+  <!-- MAIN WORKSPACE -->
+  <main class="flex-1 flex flex-col lg:flex-row overflow-hidden">
+
+    <!-- RIGHT SIDEBAR: EDITOR CONTROLS -->
+    <aside id="editor-sidebar" class="no-print w-full lg:w-[450px] xl:w-[480px] shrink-0 bg-slate-900 border-l border-slate-800 flex flex-col lg:h-[calc(100vh-61px)] overflow-y-auto select-text">
+
+      <!-- 3 Instant Student Story Presets -->
+      <div class="p-3.5 bg-slate-950/70 border-b border-slate-800">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[11px] font-bold text-slate-300 flex items-center gap-1.5">
+            ✨ טעינת כתבת סטודנט/ית מוכנה לדוגמה (בלחיצה אחת):
+          </span>
+        </div>
+        <div class="grid grid-cols-3 gap-1.5">
+          <button onclick="loadPreset(0)" class="text-right px-2.5 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-emerald-500 transition group cursor-pointer">
+            <div class="text-[11px] font-bold text-emerald-300 truncate">1. אדריכלות ביולוגית</div>
+            <div class="text-[9.5px] text-slate-400 truncate">נועה לוי • ביו-טקטורה</div>
+          </button>
+          <button onclick="loadPreset(1)" class="text-right px-2.5 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-amber-400 transition group cursor-pointer">
+            <div class="text-[11px] font-bold text-amber-300 truncate">2. עיצוב חברתי/עירוני</div>
+            <div class="text-[9.5px] text-slate-400 truncate">תומר אלון • Eye Style</div>
+          </button>
+          <button onclick="loadPreset(2)" class="text-right px-2.5 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-pink-400 transition group cursor-pointer">
+            <div class="text-[11px] font-bold text-pink-300 truncate">3. משחקים ו-AI גראנג׳</div>
+            <div class="text-[9.5px] text-slate-400 truncate">שירה חדד • Plastikcomb</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Editor Tabs -->
+      <div class="grid grid-cols-4 border-b border-slate-800 bg-slate-900/95 sticky top-0 z-20 backdrop-blur-sm">
+        <button onclick="switchEditorTab('tab-templates')" id="tab-btn-templates" class="py-3 px-1 flex flex-col items-center gap-1 text-[11px] font-bold border-b-2 border-emerald-500 text-emerald-400 bg-slate-800/60 cursor-pointer">
+          <span>📐 בחירת תבנית</span>
+        </button>
+        <button onclick="switchEditorTab('tab-content')" id="tab-btn-content" class="py-3 px-1 flex flex-col items-center gap-1 text-[11px] font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 cursor-pointer">
+          <span>✍️ תוכן הכתבה</span>
+        </button>
+        <button onclick="switchEditorTab('tab-media')" id="tab-btn-media" class="py-3 px-1 flex flex-col items-center gap-1 text-[11px] font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 cursor-pointer">
+          <span>📷 תמונות ודימויים</span>
+        </button>
+        <button onclick="switchEditorTab('tab-helper')" id="tab-btn-helper" class="py-3 px-1 flex flex-col items-center gap-1 text-[11px] font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 cursor-pointer">
+          <span>💡 עוזר כתיבה</span>
+        </button>
+      </div>
+
+      <!-- TAB 1: 9 TEMPLATES SELECTOR -->
+      <div id="tab-templates" class="p-4 space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xs font-bold text-white">בחרו מתוך 9 תבניות כפולה (מותאמות לעברית):</h3>
+          <span class="text-[10px] text-slate-400">החלפה מיידית ללא איבוד טקסט</span>
+        </div>
+
+        <div id="template-cards-grid" class="grid grid-cols-1 gap-2.5">
+          <!-- Populated dynamically by JS -->
+        </div>
+
+        <!-- Editorial Accent Color -->
+        <div class="pt-3 border-t border-slate-800">
+          <label class="block text-xs font-bold text-slate-300 mb-2">צבע הדגשה מערכתי (Accent Color):</label>
+          <div class="flex items-center gap-2.5">
+            <button onclick="updateField('accentColor', '#2d5a4c')" class="w-7 h-7 rounded-full bg-[#2d5a4c] border-2 border-white ring-2 ring-emerald-400 cursor-pointer" title="ירוק אלפיני"></button>
+            <button onclick="updateField('accentColor', '#b47b38')" class="w-7 h-7 rounded-full bg-[#b47b38] border-2 border-slate-600 cursor-pointer" title="זהב אוכרה"></button>
+            <button onclick="updateField('accentColor', '#1d4ed8')" class="w-7 h-7 rounded-full bg-[#1d4ed8] border-2 border-slate-600 cursor-pointer" title="כחול גלריה (Whitechapel)"></button>
+            <button onclick="updateField('accentColor', '#dc2626')" class="w-7 h-7 rounded-full bg-[#dc2626] border-2 border-slate-600 cursor-pointer" title="אדום מניפסט"></button>
+            <button onclick="updateField('accentColor', '#18181b')" class="w-7 h-7 rounded-full bg-[#18181b] border-2 border-slate-600 cursor-pointer" title="שחור מערכת"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: ARTICLE CONTENT INPUTS -->
+      <div id="tab-content" class="p-4 space-y-4 hidden">
+        <!-- Student & Magazine Identity -->
+        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-3">
+          <div class="text-xs font-bold text-emerald-400">פרטי הסטודנט/ית והמגזין ב-2036</div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">שם הסטודנט/ית (היוצר/ת ב-2036)</label>
+              <input id="inp-studentName" type="text" oninput="updateField('studentName', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">טייטל / תפקיד ב-2036</label>
+              <input id="inp-role2036" type="text" oninput="updateField('role2036', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">שם המגזין (כותרת רצה)</label>
+              <input id="inp-pubName" type="text" oninput="updateField('pubName', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">תאריך וגיליון</label>
+              <input id="inp-issueDate" type="text" oninput="updateField('issueDate', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">שם הסטודיו / קולקטיב</label>
+              <input id="inp-studioName" type="text" oninput="updateField('studioName', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">ערים פעילות (למשל: תל אביב — מילאנו)</label>
+              <input id="inp-studioLocation" type="text" oninput="updateField('studioLocation', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- Headlines & Stylized Titles -->
+        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-3">
+          <div class="text-xs font-bold text-amber-400">כותרות ראשיות וכותרות ראווה</div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">כותרת הכתבה הראשית (Headline)</label>
+            <textarea id="inp-headline" rows="2" oninput="updateField('headline', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white font-bold focus:border-emerald-500 focus:outline-none"></textarea>
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">כותרת משנה (Subtitle / Deck)</label>
+            <textarea id="inp-subheadline" rows="2" oninput="updateField('subheadline', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-slate-200 focus:border-emerald-500 focus:outline-none"></textarea>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">כותרת 3 שורות (עליונה)</label>
+              <input id="inp-headlineTop" type="text" oninput="updateField('headlineTop', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">מילה אמצעית</label>
+              <input id="inp-headlineMiddle" type="text" oninput="updateField('headlineMiddle', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-xs text-emerald-300 font-bold">
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">שורה תחתונה</label>
+              <input id="inp-headlineBottom" type="text" oninput="updateField('headlineBottom', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-xs text-white font-bold">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">כותרת מרווחת עליונה (תבנית 2)</label>
+              <input id="inp-spacedTop" type="text" oninput="updateField('spacedTop', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">כותרת מרווחת תחתונה (תבנית 2)</label>
+              <input id="inp-spacedBottom" type="text" oninput="updateField('spacedBottom', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-xs text-white">
+            </div>
+          </div>
+        </div>
+
+        <!-- Pull Quote & Lead -->
+        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-3">
+          <div class="text-xs font-bold text-indigo-300">פתיח וציטוט מרכזי (Pull Quote)</div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">פסקת פתיחה מודגשת (Lead Paragraph)</label>
+            <textarea id="inp-leadParagraph" rows="3" oninput="updateField('leadParagraph', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white leading-relaxed"></textarea>
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">ציטוט בולט מהכתבה (Pull Quote)</label>
+            <textarea id="inp-pullQuote" rows="2" oninput="updateField('pullQuote', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-emerald-200 font-semibold"></textarea>
+          </div>
+        </div>
+
+        <!-- Body Columns 1 & 2 -->
+        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-white">גוף הכתבה (טור 1 + טור 2)</span>
+            <label class="flex items-center gap-1.5 text-[11px] text-slate-300 cursor-pointer">
+              <input id="inp-dropCap" type="checkbox" onchange="updateField('dropCap', this.checked)" class="rounded accent-emerald-500">
+              אות פתיח גדולה (Drop Cap)
+            </label>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">כותרת ביניים 1</label>
+              <input id="inp-subhead1" type="text" oninput="updateField('sectionSubheading1', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">כותרת ביניים 2</label>
+              <input id="inp-subhead2" type="text" oninput="updateField('sectionSubheading2', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-xs text-white">
+            </div>
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">טקסט הכתבה — חלק א׳ (עמוד ימין / טור ראשון)</label>
+            <textarea id="inp-bodyCol1" rows="5" oninput="updateField('bodyCol1', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white leading-relaxed"></textarea>
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">טקסט הכתבה — חלק ב׳ (עמוד שמאל / טור שני)</label>
+            <textarea id="inp-bodyCol2" rows="5" oninput="updateField('bodyCol2', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white leading-relaxed"></textarea>
+          </div>
+        </div>
+
+        <!-- Interview Q&A (Especially for Template 8 Eye Archive & Template 9 Plastikcomb) -->
+        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-2.5">
+          <div class="text-xs font-bold text-pink-300">ראיון שאלות ותשובות (עבור תבניות 8 ו-9)</div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">שאלה 1 מהמראיין</label>
+            <input id="inp-q1" type="text" oninput="updateField('q1', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold">
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">תשובה 1 של היוצר/ת</label>
+            <textarea id="inp-a1" rows="2" oninput="updateField('a1', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-slate-200"></textarea>
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">שאלה 2 מהמראיין</label>
+            <input id="inp-q2" type="text" oninput="updateField('q2', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold">
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">תשובה 2 של היוצר/ת</label>
+            <textarea id="inp-a2" rows="2" oninput="updateField('a2', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-slate-200"></textarea>
+          </div>
+        </div>
+
+        <!-- 5 Timeline Milestones 2026-2036 -->
+        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-2.5">
+          <div class="text-xs font-bold text-emerald-400">ציר זמן: 5 אבני דרך (2026–2036)</div>
+          <div id="milestones-inputs-container" class="space-y-2"></div>
+        </div>
+      </div>
+
+      <!-- TAB 3: IMAGES & VISUAL CONTROLS -->
+      <div id="tab-media" class="p-4 space-y-4 hidden">
+        <!-- Global B&W Filter + Zoom -->
+        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700 flex items-center justify-between">
+          <label class="flex items-center gap-2 text-xs font-bold text-white cursor-pointer">
+            <input id="inp-grayscale" type="checkbox" onchange="updateField('grayscale', this.checked)" class="rounded accent-emerald-500 w-4 h-4">
+            פילטר שחור-לבן עיתונאי לכל התמונות
+          </label>
+        </div>
+
+        <!-- 1. Main Hero / Spread Image -->
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-2.5">
+          <div class="text-xs font-bold text-emerald-400">1. תמונה ראשית / פרויקט מרכזי (Hero Image)</div>
+          <input type="file" accept="image/*" onchange="handleFileUpload(event, 'imageUrl')" class="block w-full text-xs text-slate-300 file:ml-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-emerald-500 file:text-slate-950 hover:file:bg-emerald-400 cursor-pointer">
+          <input id="inp-imageUrl" type="text" placeholder="או הדביקו קישור לתמונה (URL)..." oninput="updateField('imageUrl', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300">
+          <input id="inp-imageCaption" type="text" placeholder="כיתוב תמונה ראשית..." oninput="updateField('imageCaption', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <div>
+              <div class="flex justify-between text-[10px] text-slate-400"><span>מיקום אנכי</span><span id="lbl-posY">50%</span></div>
+              <input type="range" min="0" max="100" value="50" oninput="updateImageTransform('imagePosY', this.value)" class="w-full accent-emerald-500">
+            </div>
+            <div>
+              <div class="flex justify-between text-[10px] text-slate-400"><span>תקריב (Zoom)</span><span id="lbl-zoom">100%</span></div>
+              <input type="range" min="100" max="150" value="100" oninput="updateImageTransform('imageZoom', this.value)" class="w-full accent-emerald-500">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Creator Portrait Image -->
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-2.5">
+          <div class="text-xs font-bold text-amber-300">2. תמונת פורטרט של הסטודנט/ית ב-2036</div>
+          <input type="file" accept="image/*" onchange="handleFileUpload(event, 'portraitUrl')" class="block w-full text-xs text-slate-300 file:ml-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-amber-400 file:text-slate-950 hover:file:bg-amber-300 cursor-pointer">
+          <input id="inp-portraitUrl" type="text" placeholder="או הדביקו קישור לפורטרט..." oninput="updateField('portraitUrl', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300">
+        </div>
+
+        <!-- 3. Secondary Project Image -->
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-2.5">
+          <div class="text-xs font-bold text-indigo-300">3. תמונת פרויקט שנייה (עמוד שמאל / קטלוג)</div>
+          <input type="file" accept="image/*" onchange="handleFileUpload(event, 'secondaryImageUrl')" class="block w-full text-xs text-slate-300 file:ml-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-indigo-500 file:text-white hover:file:bg-indigo-400 cursor-pointer">
+          <input id="inp-secondaryImageUrl" type="text" placeholder="או הדביקו קישור לתמונה שנייה..." oninput="updateField('secondaryImageUrl', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300">
+          <input id="inp-secondaryImageCaption" type="text" placeholder="כיתוב תמונה שנייה..." oninput="updateField('secondaryImageCaption', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+        </div>
+
+        <!-- 4. Gallery Image 3 & 4 -->
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/80 space-y-2.5">
+          <div class="text-xs font-bold text-pink-300">4. תמונת גלריה שלישית (לתבניות קטלוג וארכיון)</div>
+          <input type="file" accept="image/*" onchange="handleFileUpload(event, 'galleryImageUrl')" class="block w-full text-xs text-slate-300 file:ml-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-pink-500 file:text-white cursor-pointer">
+          <input id="inp-galleryImageUrl" type="text" placeholder="או הדביקו קישור לתמונת גלריה..." oninput="updateField('galleryImageUrl', this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300">
+        </div>
+      </div>
+
+      <!-- TAB 4: PEDAGOGICAL WRITING HELPER -->
+      <div id="tab-helper" class="p-4 space-y-4 hidden">
+        <div class="p-4 rounded-xl bg-gradient-to-br from-emerald-950/80 to-slate-900 border border-emerald-500/30 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300">איך לכתוב כתבת פרופיל על עצמך בשנת 2036?</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            מטרת התרגיל היא לדמיין את עצמכם בעוד 10 שנים — לא כמשאלת לב מעורפלת, אלא דרך עיניים של עיתונאי שמבקר בסטודיו שלכם, מראיין אתכם ובוחן את עבודותיכם.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800">
+              <div class="text-xs font-bold text-amber-300">1. כתיבה בגוף שלישי ("מבט מבחוץ")</div>
+              <p class="text-[11px] text-slate-300 mt-0.5">
+                במקום לכתוב "אני מעצב", כתבו כפי שהכתב רואה אתכם: <em>"כשנכנסים לסטודיו של [השם שלך] בשנת 2036, הדבר הראשון שמושך את העין הוא..."</em>
+              </p>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800">
+              <div class="text-xs font-bold text-emerald-300">2. פרויקט הדגל ב-2036</div>
+              <p class="text-[11px] text-slate-300 mt-0.5">
+                תארו פרויקט אחד ספציפי שבזכותו התפרסמתם. איזו בעיה אמיתית בעולם של 2036 הוא פותר? באילו חומרים או טכנולוגיות השתמשתם?
+              </p>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800">
+              <div class="text-xs font-bold text-indigo-300">3. הקשר לתקופת הלימודים ב-2026</div>
+              <p class="text-[11px] text-slate-300 mt-0.5">
+                חברו בין ההווה לעתיד: <em>"הכול התחיל מתרגיל סטודנטים קטן בשנת 2026, שהפך תוך עשור לשיטת עבודה בינלאומית..."</em>
+              </p>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800">
+              <div class="text-xs font-bold text-pink-300">4. ציטוט ישיר בגוף ראשון (Pull Quote)</div>
+              <p class="text-[11px] text-slate-300 mt-0.5">
+                נסחו משפט מפתח אחד חזק שמסכם את ה"אני מאמין" המקצועי שלכם כיוצרים בעוד עשור.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- LEFT STAGE: LIVE DOUBLE-PAGE SPREAD PREVIEW -->
+    <section id="preview-stage" class="flex-1 bg-stone-300 overflow-auto p-3 sm:p-6 flex flex-col items-center justify-start">
+
+      <!-- Quick Numbered Template Switcher Bar Above Spread -->
+      <div class="no-print w-full max-w-[1140px] mb-3.5 flex flex-wrap items-center justify-between gap-2 bg-slate-900 text-white px-3.5 py-2 rounded-xl shadow-md">
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <span class="text-xs font-bold text-slate-400 ml-1">מעבר מהיר בין 9 התבניות:</span>
+          <div id="quick-template-pills" class="flex items-center gap-1 flex-wrap"></div>
+        </div>
+
+        <!-- Contextual Action for Template 9 (Plastikcomb 180° Flip) -->
+        <button id="plastikcomb-flip-btn" onclick="togglePlastikcombFlip()" class="hidden px-3 py-1 rounded-lg bg-pink-500 hover:bg-pink-400 text-slate-950 font-black text-xs transition cursor-pointer shadow">
+          הפוך עמוד שמאל לקריאה נוחה ↻
+        </button>
+      </div>
+
+      <!-- =======================================================================
+           THE DOUBLE-PAGE MAGAZINE SPREAD CANVAS (A3 LANDSCAPE RATIO 1.4142 : 1)
+           ======================================================================= -->
+      <div id="magazine-spread-canvas"
+           class="w-full bg-white text-slate-900 shadow-[0_25px_65px_-12px_rgba(0,0,0,0.48)] transition-all duration-200 origin-top relative overflow-hidden select-text"
+           style="max-width: 1080px; aspect-ratio: 1.4142 / 1;">
+        <!-- Rendered dynamically by renderSpread() -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    // =========================================================================
+    // 1. METADATA FOR ALL 9 DOUBLE-PAGE SPREAD TEMPLATES
+    // =========================================================================
+    const TEMPLATES = [
+      {
+        id: 'calling',
+        num: 1,
+        name: 'הקריאה של הפסגה',
+        ref: 'השראה: The Calling of the Mountains',
+        desc: 'צילום רחב החוצה את קו האמצע, כותרת תלת-שורתית עם קווים בימין וכרטיס טקסט ממוסגר הצף בשמאל',
+        badge: 'חפיפה אלגנטית'
+      },
+      {
+        id: 'explorer',
+        num: 2,
+        name: 'יוצר במשרה מלאה',
+        ref: 'השראה: FULL TIME EXPLORER',
+        desc: 'תמונה מרכזית החוצה את הכפולה עם כותרות מרווחות מעליה ומתחתיה, 4 טורי טקסט ואות פתיח מוזהבת',
+        badge: 'גריד סימטרי'
+      },
+      {
+        id: 'secret',
+        num: 3,
+        name: 'לכל מסע יש יעד סודי',
+        ref: 'השראה: All journeys have secret destinations',
+        desc: 'עמוד ימין לבן ומינימליסטי עם כותרת סריף גדולה וקו מפריד, מול עמוד שמאל עם תמונת פרויקט אנכית עצומה',
+        badge: 'מינימליזם'
+      },
+      {
+        id: 'contents',
+        num: 4,
+        name: 'ציר הזמן וטור אישי',
+        ref: 'השראה: Contents & Adventure Awaits',
+        desc: 'עמוד ימין בצילום מלא עם רצועת ציר-זמן שקופה (01–05), ועמוד שמאל עם זוג תמונות וטור אישי חתום',
+        badge: 'ציר זמן'
+      },
+      {
+        id: 'roadtrip',
+        num: 5,
+        name: 'מסע אל 2036 (פנורמי)',
+        ref: 'השראה: LET’S GO ON A Roadtrip',
+        desc: 'תמונת אווירה כהה הנמתחת על פני 100% משטח שני העמודים עם טיפוגרפיית ראווה לבנה וטקסטים צפים',
+        badge: 'Full Bleed'
+      },
+      {
+        id: 'backpack',
+        num: 6,
+        name: 'פסיפס תיק עבודות',
+        ref: 'השראה: Weekend Backpack Catalog',
+        desc: 'עמוד ימין עם כותרת דו-משקלית על גבי תמונה, ועמוד שמאל בגריד קטלוגי מודולרי של 4 פרויקטים',
+        badge: 'קטלוג עבודות'
+      },
+      {
+        id: 'eye_manifesto',
+        num: 7,
+        name: 'מניפסט טיפוגרפי (Eye)',
+        ref: 'השראה: Eye Magazine — "There is such a thing as society"',
+        desc: 'נייר עיתון קרם (#f6f3ec), כותרת ענקית דחוסה עם כוכבית (*), 3 טורי סריף וקופסת מניפסט שחורה "קודם כל מה שחשוב"',
+        badge: 'Eye מניפסט'
+      },
+      {
+        id: 'eye_archive',
+        num: 8,
+        name: 'גריד ארכיון (Eye)',
+        ref: 'השראה: Eye Magazine — Whitechapel Gallery Archive',
+        desc: 'עמוד ימין עם כרזת OPEN כחולה-צהובה וכרזה אדומה + כיתובים ממוספרים (20-26), ועמוד שמאל עם ראיון וקטלוגים',
+        badge: 'Eye ארכיון'
+      },
+      {
+        id: 'plastikcomb',
+        num: 9,
+        name: 'פנזין גראנג׳ (Plastikcomb)',
+        ref: 'השראה: Plastikcomb — "I WORK WITH MY INSTINCT"',
+        desc: 'קולאז׳ מחתרתי עם משיכות מכחול ב-SVG, כותרות חלולות בתיבות שחורות, מכונת כתיבה ועמוד שמאל הפוך ב-180°',
+        badge: 'אקספרימנטלי'
+      }
+    ];
+
+    // =========================================================================
+    // 2. THREE COMPLETE STUDENT PRESET STORIES (2036)
+    // =========================================================================
+    const PRESETS = [
+      // Preset 0: Bio-Architecture
+      {
+        template: 'calling',
+        studentName: 'נועה לוי',
+        role2036: 'אדריכלית ביו-מינרלית ומייסדת Bio-Tecture',
+        pubName: 'מוסף גלריה // מהדורת 2036',
+        issueDate: 'אוקטובר 2036 | גיליון 48',
+        category: 'אדריכלות המחר',
+        studioName: 'סטודיו Bio-Tecture',
+        studioLocation: 'תל אביב — רוטרדם',
+        pageRightNum: '24',
+        pageLeftNum: '25',
+        headline: 'יש דבר כזה אדריכלות שנושמת וצומחת מעצמה*',
+        subheadline: 'עשור לאחר שסיימה את לימודיה ב-2026, האדריכלית נועה לוי מובילה את פרויקט שיקום קו החוף באמצעות שלדי פטריות ומינרלים ימיים. ביקור במעבדה שמחליפה את הבטון במערכות חיות.',
+        headlineTop: 'הקריאה של',
+        headlineMiddle: 'הטבע',
+        headlineBottom: 'העירוני החדש',
+        spacedTop: 'א ד ר י כ ל ו ת',
+        spacedBottom: 'ב י ו ל ו ג י ת',
+        leadParagraph: 'כשנכנסים לסטודיו של נועה לוי בדרום תל אביב בשנת 2036, הדבר הראשון שבולט הוא היעדרם של מסכי שרטוט. במקומם ניצבים מכלי זכוכית מוארים שבהם צומחים מבנים גיאומטריים מתפטיר פטריות ואצות ים.',
+        pullQuote: '״מעצב בשנת 2036 הוא לא דיקטטור שקובע צורה סופית, אלא גנן שמייצר תנאים לצמיחה משותפת עם הטבע״',
+        sectionSubheading1: 'מהמעבדה האקדמית לחזית האקלים',
+        sectionSubheading2: 'אדריכלות כגננות עירונית חיה',
+        bodyCol1: 'רק לפני עשר שנים, כשהייתה עוד סטודנטית שחיפשה את קולה האישי ב-2026, הרעיונות הללו נשמעו כמו מדע בדיוני רחוק או תרגיל ספקולטיבי בקורס חומרים. אך משבר האקלים והצורך הדחוף בחומרי בנייה סופחי פחמן הפכו את המחקר האקדמי שלה לאחת החברות המבוקשות באירופה ובישראל.\n\nהפרויקט האחרון שלה, "ריאה ירוקה על קו המים", משלב חזיתות בניינים נקבוביות שסופחות מזהמים מהאוויר ומייצרות תאורה ביולומינסנטית רכה בשעות הלילה ללא צורך בחשמל עירוני.',
+        bodyCol2: 'הקירות עצמם משמשים כבית גידול למיקרו-פלורה מקומית שמקררת את המבנה בקיץ באופן טבעי וחוסכת כ-70% מצריכת האנרגיה.\n\n"השינוי הגדול ביותר שעברתי בעשור האחרון הוא הוויתור על שליטה מוחלטת," אומרת לוי. "כשחומר חי פוגש קהילה אנושית, נוצרת שפה עיצובית חדשה שמכבדת את הזמן ואת הסביבה." לקראת סוף השנה תפתח לוי שלוחה חדשה של הסטודיו בנמל חיפה, שם יכשיר הצוות שלה דור חדש של מעצבים-ביולוגים.',
+        q1: 'איך נראה תהליך היצירה שלך בסטודיו מהרגע הראשון ועד שהמבנה עומד?',
+        a1: 'אני עובדת עם האינטואיציה של החומר החי יותר מכל דבר אחר. אנחנו לא משרטטים קווים נוקשים במחשב, אלא מזריקים תרביות של תפטיר ומינרלים לתבניות בד נושמות ונותנים לאור וללחות לפסל את השלד.',
+        q2: 'מה ההשפעה הכי גדולה שלקחת איתך מתקופת הלימודים ב-2026?',
+        a2: 'האומץ להיכשל במעבדה. ב-2026 ניסיתי לגדל לבנה ראשונה שהתפרקה אחרי יומיים, אבל מתוך הסדקים שלה הבנתי איך לבנות את שובר הגלים החי בוונציה.',
+        milestones: [
+          { num: '01', year: '2027', title: 'לבנה חיה ראשונה', text: 'פיתוח אב-טיפוס ראשון של לבנה סופחת פחמן במסגרת פרויקט הגמר' },
+          { num: '02', year: '2029', title: 'הקמת המעבדה', text: 'פתיחת סטודיו Bio-Tecture בדרום תל אביב עם צוות ביולוגים ואדריכלים' },
+          { num: '03', year: '2032', title: 'שיקום קו החוף', text: 'זכייה במכרז הבינלאומי להקמת שוברי גלים חיים ומטהרי מים' },
+          { num: '04', year: '2034', title: 'פביליון פריז', text: 'הצגת מבנה צומח בגובה 18 מטרים בתערוכת האקלים העולמית' },
+          { num: '05', year: '2036', title: 'הביאנלה בוונציה', text: 'זכייה בפרס אריה הזהב על פרויקט "שונית עירונית" והוצאת ספר מחקר' }
+        ],
+        imageUrl: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85',
+        imageCaption: 'אתר המחקר האקולוגי של הסטודיו: שילוב בין טופוגרפיה טבעית למבנים ביו-מינרליים, 2036.',
+        portraitUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85',
+        secondaryImageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85',
+        secondaryImageCaption: 'פנים פביליון "שונית עירונית": קירות נושמים המווסתים אור וטמפרטורה.',
+        galleryImageUrl: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1000&q=85',
+        dropCap: true,
+        grayscale: false,
+        accentColor: '#2d5a4c',
+        imagePosY: 50,
+        imageZoom: 100,
+        plastikFlippedUpright: false
+      },
+
+      // Preset 1: Social & Urban Design (Eye Magazine Manifesto Style)
+      {
+        template: 'eye_manifesto',
+        studentName: 'תומר אלון',
+        role2036: 'מעצב תעשייתי וחוקר מרחב ציבורי אנלוגי',
+        pubName: 'EYE DESIGN // גיליון מיוחד 2036',
+        issueDate: 'סתיו 2036 | גיליון 13/36',
+        category: 'מניפסט חברתי',
+        studioName: 'מעבדת Tactile Commons',
+        studioLocation: 'יפו — ציריך',
+        pageRightNum: '24',
+        pageLeftNum: '25',
+        headline: 'יש דבר כזה חברה ועיצוב אנושי*',
+        subheadline: 'הוויכוח העכשווי בשנת 2036 אינו עוסק עוד בשאלה כיצד בינה מלאכותית מייצרת צורות, אלא בתפקיד החברתי והמוסרי של המעצב בתוך קהילה חיה שזקוקה למגע אנושי ולמרחב ציבורי משותף.',
+        headlineTop: 'שקט של',
+        headlineMiddle: 'חומר',
+        headlineBottom: 'בעידן הפוסט-מסך',
+        spacedTop: 'י ו צ ר   ב מ ש ר ה',
+        spacedBottom: 'מ ל א ה  •  6 3 0 2',
+        leadParagraph: 'אחרי עשור של הצפה דיגיטלית ומסכים וירטואליים, המעצב תומר אלון הוביל את תנועת "קודם כל מה שחשוב 2036" – החזרת העיצוב התעשייתי והגרפי לשירות החינוך, הרווחה והמפגש הבין-אישי ברחוב.',
+        pullQuote: '״עבור מעצבים רבים ב-2036, החיפוש אחר פתרונות צורניים הוא רק חלק מפרויקט חברתי ופוליטי ארוך-טווח״',
+        sectionSubheading1: 'המרד השקט נגד הזכוכית הקרה',
+        sectionSubheading2: 'מניפסט המעצבים החדש של 2036',
+        bodyCol1: 'בשנת 2026, כשתומר אלון היה סטודנט בעיצומה של מהפכת ה-AI הראשונה, נדמה היה שתפקיד המעצב יצטמצם לכתיבת פרומפטים מהירים עבור תאגידי פרסום. אבל עשור לאחר מכן, המציאות הלכה לכיוון הפוך לחלוטין: ככל שהדימויים הסינתטיים הפכו לזולים ואינסופיים, כך זינק הצורך בעיצוב פיזי, אמין ובעל אחריות חברתית.\n\nהפרויקט המרכזי של אלון, שזכה השנה בפרס הטריאנלה במילאנו, הוא רשת של ספריות כלים ורהיטי רחוב אקוסטיים מעץ ממוחזר וטרצו מקומי הפזורים ב-40 ערים.',
+        bodyCol2: 'לצד עבודתו בסטודיו ביפו, ניסח אלון יחד עם 35 מעצבים ואדריכלים צעירים את הגרסה המחודשת של מניפסט "קודם כל מה שחשוב" לשנת 2036. המניפסט קורא לבוגרי בתי הספר לעיצוב להפנות את כישוריהם ממשימות שיווק צרכני לעבר שיקום תשתיות קהילתיות, עיצוב רפואי מונע וחינוך פתוח.\n\n"הטכנולוגיה של 2036 מאפשרת לנו לייצר כל אובייקט בדקות," אומר אלון, "ולכן השאלה היחידה שנותרה חשובה היא לא איך מייצרים, אלא למה ולמען מי אנחנו בוחרים לעצב."',
+        q1: 'למה בחרת לעזוב את עולם המסכים לטובת עץ, ברזל ונייר מודפס?',
+        a1: 'כי קהילה לא נבנית דרך זכוכית. כשאתה מציב ספסל אקוסטי או מערכת שילוט חכמה ממתכת חרוטה בשכונה, אנשים מרגישים שמישהו השקיע בהם מחשבה וכבוד.',
+        q2: 'מה המסר שלך לסטודנטים שמתחילים ללמוד היום?',
+        a2: 'אל תתחרו במכונות על מהירות. תתחרו על אמפתיה, על עומק תרבותי ועל עמדה מוסרית ברורה.',
+        milestones: [
+          { num: '01', year: '2027', title: 'קולקציית ביכורים', text: 'הצגת סדרת כלי העבודה הקהילתיים בשבוע העיצוב ירושלים' },
+          { num: '02', year: '2029', title: 'מחקר נוירו-טקטילי', text: 'שיתוף פעולה עם ETH ציריך לפיתוח חומרים מרגיעים לבתי ספר' },
+          { num: '03', year: '2031', title: 'מרחבי למידה שקטים', text: 'הטמעת כיתות הלימוד האנלוגיות ב-400 בתי ספר ציבוריים' },
+          { num: '04', year: '2034', title: 'פרסום המניפסט', text: 'הוצאת הספר "יש דבר כזה חברה ועיצוב" ב-14 שפות' },
+          { num: '05', year: '2036', title: 'רטרוספקטיבה במילאנו', text: 'תערוכת יחיד מרכזית בטריאנלה של מילאנו ופרס מצוינות' }
+        ],
+        imageUrl: 'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1400&q=85',
+        imageCaption: 'שולחן העבודה במעבדת Tactile Commons: כלי מדידה אנלוגיים, דגמי עץ וקטלוגים מודפסים.',
+        portraitUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85',
+        secondaryImageUrl: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=85',
+        secondaryImageCaption: 'מתוך ארכיון התערוכה של אלון: כרזות טיפוגרפיות ואובייקטים למרחב הציבורי.',
+        galleryImageUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=85',
+        dropCap: true,
+        grayscale: false,
+        accentColor: '#18181b',
+        imagePosY: 50,
+        imageZoom: 100,
+        plastikFlippedUpright: false
+      },
+
+      // Preset 2: Experimental Games & AI Zine (Plastikcomb Grunge Style)
+      {
+        template: 'plastikcomb',
+        studentName: 'שירה חדד',
+        role2036: 'במאית עולמות משחק היברידיים ואמנית קולאז׳ ביו-דיגיטלי',
+        pubName: 'PLASTIK // גיליון מחתרתי 09',
+        issueDate: 'חורף 2036 | Q/A 03–05',
+        category: 'ראיון אינסטינקט',
+        studioName: 'קולקטיב Raw Glitch',
+        studioLocation: 'ברלין — חיפה',
+        pageRightNum: '24',
+        pageLeftNum: '25',
+        headline: 'אני עובדת עם האינטואיציה שלי יותר מכל דבר אחר',
+        subheadline: 'בזמן שכולם מלטשים עולמות וירטואליים סטריליים, שירה חדד קורעת ניירות, סורקת כתמי דיו ומשלבת אותם לתוך מנועי משחק חושיים שמגיבים לדופק של השחקן.',
+        headlineTop: 'אני עובדת עם',
+        headlineMiddle: 'האינטואיציה',
+        headlineBottom: 'יותר מכל דבר אחר',
+        spacedTop: 'ק ו ל א ז ׳   ח י',
+        spacedBottom: 'ג ר א נ ג ׳  6 3 0 2',
+        leadParagraph: 'אין לי טקסים קבועים או שגרה מסודרת בסטודיו. אני מכינה את העבודות שלי על ידי בניית רקעים מופשטים, כתמי טוש, צבע אקרילי ומילים מהירות שאני גוזרת וזורקת לתוך תיקיות כאוטיות כדי שיהיו מוכנות לרגע שבו תגיע ההשראה.',
+        pullQuote: '״קולאז׳ הוא הטכניקה החופשית והזורמת ביותר גם בשנת 2036 — הדרך הטובה ביותר ליצור היא להיות זמינה ברגע שהניצוץ מכה״',
+        sectionSubheading1: 'תהליך יצירתי כאוטי במכוון',
+        sectionSubheading2: 'בין פאנק אנלוגי לבינה מלאכותית',
+        bodyCol1: 'זה לא תהליך מתוכנן מראש עד הפרט האחרון, הוא די כאוטי במכוון. אני פשוט מבלה שעות בגזירת דימויים, ממיינת אותם במשך עשר דקות ואז זורקת הכול לתוך מנוע המשחק שלנו. אני חושבת שהדרך הטובה ביותר ליצור משהו אמיתי ב-2036 היא לעולם לא לכפות עליו שלמות סינתטית.\n\nאני בונה את העולמות הווירטואליים שלי בהתפרצות פתאומית של אנרגיה, לפעמים שתיים או שלוש סצנות במקביל, ואז מרפה מהן לשבוע. אני לעולם לא נוטשת פרויקט באמצע – אני מתמקדת בלסיים כל יצירה לא משנה כמה היא מחוספסת.',
+        bodyCol2: 'באופן מוזר, אני כמעט לא מקשיבה למוזיקה כשאני מרכיבה קולאז׳ים אינטראקטיביים, כי אני עסוקה מדי בלהקשיב למחשבות שלי או להרגיע אותן, אבל כל מה שאני יוצרת ויזואלית מנסה לחקות את האנרגיה והזעם של תרבות הפנזינים שעליה גדלתי כסטודנטית ב-2026.\n\nאני מנסה להיות כנה לחלוטין לגבי הרגשות והמצב התודעתי שלי, כך שכל פרויקט הוא יומן ויזואלי אישי – תערובת של איור ידני, טיפוגרפיה שבורה וקוד חי.',
+        q1: 'איך נראה תהליך היצירה שלך מהתחלה ועד הסוף? האם יש לך טקסים, שגרה או פלייליסט שמכניסים אותך לאווירה?',
+        a1: 'אני עובדת עם האינסטינקט שלי יותר מכל דבר אחר. אני גוזרת ניירות, סורקת טקסטורות גולמיות ומזריקה אותן ישירות לתוך המנוע הגרפי בלי פילטרים.',
+        q2: 'העבודות שלך משלבות טיפוגרפיה הפוכה, איורים ידניים וצילום אופנה. אילו רעיונות ומי האמנים שהשפיעו עלייך במיוחד?',
+        a2: 'דייוויד קרסון, תרבות הפנזינים של שנות ה-90 והנוף התעשייתי של חיפה. המקום שבו למדתי ב-2026 לימד אותי שדווקא השגיאות בדפוס הן המקום שבו האנושיות נכנסת.',
+        milestones: [
+          { num: '01', year: '2027', title: 'פנזין ה-AR הראשון', text: 'הוצאת מגזין מודפס שמתעורר לחיים במצלמת הרשת כפרויקט גמר' },
+          { num: '02', year: '2029', title: 'הקמת Raw Glitch', text: 'פתיחת קולקטיב אמני משחק ואיור עצמאי בברלין ובחיפה' },
+          { num: '03', year: '2032', title: 'מנוע דיו ונייר', text: 'פיתוח כלי קוד-פתוח ההופך מחברות סקיצות לעולמות תלת-ממד' },
+          { num: '04', year: '2034', title: 'תערוכת טייט מודרן', text: 'מיצב אינטראקטיבי ענק של טיפוגרפיה שבורה בלונדון' },
+          { num: '05', year: '2036', title: 'פרס האינדי העולמי', text: 'זכייה בפרס משחק השנה על היצירה "אינסטינקט גולמי"' }
+        ],
+        imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1400&q=85',
+        imageCaption: 'מתוך מחברת הסקיצות והקולאז׳ים של קולקטיב Raw Glitch, חורף 2036.',
+        portraitUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85',
+        secondaryImageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85',
+        secondaryImageCaption: 'סריקת שכבות אנלוגית מתוך פרויקט "אינסטינקט 2036".',
+        galleryImageUrl: 'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1000&q=85',
+        dropCap: false,
+        grayscale: true,
+        accentColor: '#18181b',
+        imagePosY: 50,
+        imageZoom: 100,
+        plastikFlippedUpright: false
+      }
+    ];
+
+    // =========================================================================
+    // 3. APPLICATION STATE & INITIALIZATION
+    // =========================================================================
+    let state = JSON.parse(JSON.stringify(PRESETS[0]));
+    let spreadViewMode = 'spread'; // 'spread' | 'right' | 'left'
+    let currentZoom = 95;
+
+    function initApp() {
+      // Load saved state if available
+      try {
+        const saved = localStorage.getItem('future_spread_2036_html_v1');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (parsed && parsed.studentName && parsed.milestones) {
+            state = { ...state, ...parsed };
+          }
+        }
+      } catch (e) {
+        console.warn('Could not read localStorage', e);
+      }
+
+      renderTemplateCards();
+      renderQuickTemplatePills();
+      renderMilestoneInputs();
+      syncInputsFromState();
+      renderSpread();
+    }
+
+    // =========================================================================
+    // 4. UI SYNCHRONIZATION & CONTROLS
+    // =========================================================================
+    function syncInputsFromState() {
+      const setVal = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.value = val ?? '';
+      };
+      setVal('inp-studentName', state.studentName);
+      setVal('inp-role2036', state.role2036);
+      setVal('inp-pubName', state.pubName);
+      setVal('inp-issueDate', state.issueDate);
+      setVal('inp-studioName', state.studioName);
+      setVal('inp-studioLocation', state.studioLocation);
+      setVal('inp-headline', state.headline);
+      setVal('inp-subheadline', state.subheadline);
+      setVal('inp-headlineTop', state.headlineTop);
+      setVal('inp-headlineMiddle', state.headlineMiddle);
+      setVal('inp-headlineBottom', state.headlineBottom);
+      setVal('inp-spacedTop', state.spacedTop);
+      setVal('inp-spacedBottom', state.spacedBottom);
+      setVal('inp-leadParagraph', state.leadParagraph);
+      setVal('inp-pullQuote', state.pullQuote);
+      setVal('inp-subhead1', state.sectionSubheading1);
+      setVal('inp-subhead2', state.sectionSubheading2);
+      setVal('inp-bodyCol1', state.bodyCol1);
+      setVal('inp-bodyCol2', state.bodyCol2);
+      setVal('inp-q1', state.q1);
+      setVal('inp-a1', state.a1);
+      setVal('inp-q2', state.q2);
+      setVal('inp-a2', state.a2);
+      setVal('inp-imageUrl', state.imageUrl);
+      setVal('inp-imageCaption', state.imageCaption);
+      setVal('inp-portraitUrl', state.portraitUrl);
+      setVal('inp-secondaryImageUrl', state.secondaryImageUrl);
+      setVal('inp-secondaryImageCaption', state.secondaryImageCaption);
+      setVal('inp-galleryImageUrl', state.galleryImageUrl);
+
+      const dropCapEl = document.getElementById('inp-dropCap');
+      if (dropCapEl) dropCapEl.checked = !!state.dropCap;
+      const grayEl = document.getElementById('inp-grayscale');
+      if (grayEl) grayEl.checked = !!state.grayscale;
+    }
+
+    function renderMilestoneInputs() {
+      const container = document.getElementById('milestones-inputs-container');
+      if (!container) return;
+      container.innerHTML = state.milestones.map((m, idx) => `
+        <div class="p-2 rounded-lg bg-slate-900 border border-slate-700/80 space-y-1.5">
+          <div class="flex items-center gap-1.5">
+            <span class="text-[11px] font-mono font-bold text-emerald-400 w-6">${m.num}</span>
+            <input type="text" value="${escapeHtml(m.year)}" oninput="updateMilestone(${idx}, 'year', this.value)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-xs font-mono text-amber-300 text-center">
+            <input type="text" value="${escapeHtml(m.title)}" oninput="updateMilestone(${idx}, 'title', this.value)" class="flex-1 bg-slate-800 border border-slate-700 rounded px-2 py-1 text-xs font-bold text-white">
+          </div>
+          <input type="text" value="${escapeHtml(m.text)}" oninput="updateMilestone(${idx}, 'text', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1 text-[11px] text-slate-300">
+        </div>
+      `).join('');
+    }
+
+    function renderTemplateCards() {
+      const grid = document.getElementById('template-cards-grid');
+      if (!grid) return;
+      grid.innerHTML = TEMPLATES.map(t => {
+        const active = state.template === t.id;
+        return `
+          <button onclick="selectTemplate('${t.id}')" class="w-full text-right p-3 rounded-xl border transition flex items-start justify-between gap-2 cursor-pointer ${
+            active
+              ? 'bg-emerald-500/15 border-emerald-500 shadow-md'
+              : 'bg-slate-800/60 border-slate-700/80 hover:border-slate-600'
+          }">
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white flex items-center gap-1.5">
+                <span class="w-5 h-5 rounded bg-slate-950 text-emerald-400 text-[11px] font-mono flex items-center justify-center border border-slate-700">${t.num}</span>
+                <span>${t.name}</span>
+                ${active ? '<span class="text-emerald-400 text-xs">✓</span>' : ''}
+              </div>
+              <div class="text-[10px] font-semibold text-emerald-300/90 mt-0.5">${t.ref}</div>
+              <p class="text-[11px] text-slate-400 mt-1 leading-snug">${t.desc}</p>
+            </div>
+            <span class="text-[10px] px-2 py-0.5 rounded font-bold shrink-0 ${
+              active ? 'bg-emerald-500 text-slate-950' : 'bg-slate-700 text-slate-300'
+            }">${t.badge}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderQuickTemplatePills() {
+      const bar = document.getElementById('quick-template-pills');
+      if (!bar) return;
+      bar.innerHTML = TEMPLATES.map(t => {
+        const active = state.template === t.id;
+        return `
+          <button onclick="selectTemplate('${t.id}')" title="${t.name} (${t.ref})"
+            class="px-2.5 py-1 rounded-lg text-xs font-bold transition cursor-pointer ${
+              active
+                ? 'bg-emerald-500 text-slate-950 ring-2 ring-white'
+                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+            }">
+            ${t.num}. ${t.name.split(' ')[0]}
+          </button>
+        `;
+      }).join('');
+
+      const flipBtn = document.getElementById('plastikcomb-flip-btn');
+      if (flipBtn) {
+        if (state.template === 'plastikcomb') {
+          flipBtn.classList.remove('hidden');
+          flipBtn.textContent = state.plastikFlippedUpright
+            ? 'החזר עמוד שמאל להיפוך 180° מקורי ↺'
+            : 'הפוך עמוד שמאל לקריאה נוחה ↻';
+        } else {
+          flipBtn.classList.add('hidden');
+        }
+      }
+    }
+
+    function selectTemplate(templateId) {
+      state.template = templateId;
+      renderTemplateCards();
+      renderQuickTemplatePills();
+      renderSpread();
+    }
+
+    function togglePlastikcombFlip() {
+      state.plastikFlippedUpright = !state.plastikFlippedUpright;
+      renderQuickTemplatePills();
+      renderSpread();
+    }
+
+    function loadPreset(index) {
+      state = JSON.parse(JSON.stringify(PRESETS[index]));
+      renderTemplateCards();
+      renderQuickTemplatePills();
+      renderMilestoneInputs();
+      syncInputsFromState();
+      renderSpread();
+    }
+
+    function updateField(field, value) {
+      state[field] = value;
+      renderSpread();
+    }
+
+    function updateMilestone(idx, key, val) {
+      state.milestones[idx][key] = val;
+      renderSpread();
+    }
+
+    function updateImageTransform(field, val) {
+      state[field] = Number(val);
+      if (field === 'imagePosY') document.getElementById('lbl-posY').textContent = val + '%';
+      if (field === 'imageZoom') document.getElementById('lbl-zoom').textContent = val + '%';
+      renderSpread();
+    }
+
+    function handleFileUpload(event, targetField) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        if (e.target?.result) {
+          state[targetField] = e.target.result;
+          syncInputsFromState();
+          renderSpread();
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function switchEditorTab(tabId) {
+      ['tab-templates', 'tab-content', 'tab-media', 'tab-helper'].forEach(id => {
+        document.getElementById(id).classList.toggle('hidden', id !== tabId);
+      });
+      const btnMap = {
+        'tab-templates': 'tab-btn-templates',
+        'tab-content': 'tab-btn-content',
+        'tab-media': 'tab-btn-media',
+        'tab-helper': 'tab-btn-helper'
+      };
+      Object.entries(btnMap).forEach(([tid, bid]) => {
+        const btn = document.getElementById(bid);
+        if (tid === tabId) {
+          btn.className = 'py-3 px-1 flex flex-col items-center gap-1 text-[11px] font-bold border-b-2 border-emerald-500 text-emerald-400 bg-slate-800/60 cursor-pointer';
+        } else {
+          btn.className = 'py-3 px-1 flex flex-col items-center gap-1 text-[11px] font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 cursor-pointer';
+        }
+      });
+    }
+
+    function switchMobilePane(pane) {
+      const sidebar = document.getElementById('editor-sidebar');
+      const stage = document.getElementById('preview-stage');
+      const btnEd = document.getElementById('mob-btn-editor');
+      const btnPr = document.getElementById('mob-btn-preview');
+      if (pane === 'editor') {
+        sidebar.classList.remove('hidden');
+        stage.classList.add('hidden', 'lg:flex');
+        btnEd.className = 'flex-1 py-2.5 text-xs font-bold border-b-2 border-emerald-500 text-emerald-400 bg-slate-800/40';
+        btnPr.className = 'flex-1 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400';
+      } else {
+        sidebar.classList.add('hidden', 'lg:flex');
+        stage.classList.remove('hidden');
+        btnPr.className = 'flex-1 py-2.5 text-xs font-bold border-b-2 border-emerald-500 text-emerald-400 bg-slate-800/40';
+        btnEd.className = 'flex-1 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400';
+      }
+    }
+
+    function setSpreadViewMode(mode) {
+      spreadViewMode = mode;
+      ['spread', 'right', 'left'].forEach(m => {
+        const btn = document.getElementById('view-btn-' + m);
+        if (m === mode) {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition bg-emerald-500 text-slate-950 cursor-pointer';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800 cursor-pointer';
+        }
+      });
+      applyCanvasDimensions();
+      renderSpread();
+    }
+
+    function adjustZoom(delta) {
+      currentZoom = Math.min(115, Math.max(60, currentZoom + delta));
+      document.getElementById('zoom-label').textContent = currentZoom + '%';
+      applyCanvasDimensions();
+    }
+
+    function applyCanvasDimensions() {
+      const canvas = document.getElementById('magazine-spread-canvas');
+      if (!canvas) return;
+      if (spreadViewMode === 'spread') {
+        canvas.style.maxWidth = `${1140 * (currentZoom / 100)}px`;
+        canvas.style.aspectRatio = '1.4142 / 1';
+      } else {
+        canvas.style.maxWidth = `${640 * (currentZoom / 100)}px`;
+        canvas.style.aspectRatio = '1 / 1.4142';
+      }
+    }
+
+    function saveToLocal() {
+      try {
+        localStorage.setItem('future_spread_2036_html_v1', JSON.stringify(state));
+        const btn = document.getElementById('save-btn');
+        const original = btn.innerHTML;
+        btn.innerHTML = '<span class="text-emerald-400">✓ נשמר בדפדפן!</span>';
+        setTimeout(() => { btn.innerHTML = original; }, 2200);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function printSpread() {
+      setSpreadViewMode('spread');
+      setTimeout(() => window.print(), 150);
+    }
+
+    async function exportSpreadAsPNG() {
+      const btn = document.getElementById('png-export-btn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span>⏳ מייצר תמונה...</span>';
+      try {
+        const canvasEl = document.getElementById('magazine-spread-canvas');
+        const rendered = await html2canvas(canvasEl, {
+          scale: 2,
+          useCORS: true,
+          allowTaint: true,
+          backgroundColor: '#ffffff'
+        });
+        const link = document.createElement('a');
+        link.download = `כתבת-עתיד-2036-${state.studentName || 'סטודנט'}.png`;
+        link.href = rendered.toDataURL('image/png');
+        link.click();
+        btn.innerHTML = '<span>✓ התמונה ירדה!</span>';
+      } catch (err) {
+        console.error('PNG Export error:', err);
+        btn.innerHTML = '<span>שגיאה בייצוא (נסו הדפסה ל-PDF)</span>';
+      }
+      setTimeout(() => { btn.innerHTML = originalText; }, 2500);
+    }
+
+    // =========================================================================
+    // 5. HELPER FUNCTIONS FOR RENDERING
+    // =========================================================================
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderChrome(side, pageNum, rightText, leftText, dark = false) {
+      const textCls = dark ? 'text-white/80' : 'text-slate-500';
+      const borderCls = dark ? 'border-white/25' : 'border-slate-300';
+      const posCls = side === 'right' ? 'right-6' : 'left-6';
+      return `
+        <div class="w-full border-b ${borderCls} pb-1.5 mb-3 flex items-center justify-between text-[9px] tracking-wider uppercase font-sans-he ${textCls} z-20 relative">
+          <span class="font-bold">${escapeHtml(rightText)}</span>
+          <span>${escapeHtml(leftText)}</span>
+        </div>
+        <div class="absolute bottom-4 ${posCls} z-30 flex items-center gap-2">
+          <div class="w-5 h-5 bg-slate-900 text-white text-[9.5px] font-mono-he font-bold flex items-center justify-center shadow">
+            ${escapeHtml(pageNum)}
+          </div>
+        </div>
+      `;
+    }
+
+    function getImgStyle() {
+      return `object-position: 50% ${state.imagePosY}%; transform: scale(${state.imageZoom / 100});`;
+    }
+
+    function getGrayClass() {
+      return state.grayscale ? 'grayscale contrast-125' : '';
+    }
+
+    // =========================================================================
+    // 6. MASTER RENDERER FOR ALL 9 DOUBLE-PAGE SPREAD TEMPLATES
+    // =========================================================================
+    function renderSpread() {
+      const container = document.getElementById('magazine-spread-canvas');
+      if (!container) return;
+
+      const t = state.template;
+      const showRight = spreadViewMode !== 'left';
+      const showLeft = spreadViewMode !== 'right';
+      const colSpanClass = spreadViewMode === 'spread' ? 'col-span-6' : 'col-span-12';
+
+      const col1Paras = (state.bodyCol1 || '').split('\n').filter(Boolean);
+      const col2Paras = (state.bodyCol2 || '').split('\n').filter(Boolean);
+      const allParas = [...col1Paras, ...col2Paras];
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 1: "הקריאה של הפסגה" (The Calling of the Mountains)
+      // -----------------------------------------------------------------------
+      if (t === 'calling') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-white relative">
+            ${spreadViewMode === 'spread' ? `
+              <div class="absolute top-0 right-0 w-[62%] h-[73%] z-0 overflow-hidden bg-slate-200">
+                <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" style="${getImgStyle()}" />
+              </div>
+            ` : ''}
+
+            ${showRight ? `
+              <div class="${colSpanClass} h-full flex flex-col justify-between p-7 sm:p-9 relative border-l border-slate-200 z-10">
+                <div class="pointer-events-none absolute top-0 bottom-0 left-0 w-8 magazine-gutter-right z-30"></div>
+                ${spreadViewMode === 'right' ? `
+                  <div class="absolute top-0 right-0 left-0 h-[73%] z-0 overflow-hidden">
+                    <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" style="${getImgStyle()}" />
+                  </div>
+                ` : ''}
+                ${renderChrome('right', state.pageRightNum, state.pubName, state.category, true)}
+
+                <div class="mt-auto pt-4 flex flex-col items-center justify-center text-center z-20 h-[25%]">
+                  <div class="text-2xl sm:text-3xl font-serif-he italic font-bold text-slate-800 tracking-wide">
+                    ${escapeHtml(state.headlineTop)}
+                  </div>
+                  <div class="flex items-center justify-center gap-3 my-1 w-full max-w-[260px]">
+                    <span class="h-[1.5px] flex-1 bg-slate-800"></span>
+                    <span class="text-lg sm:text-xl font-serif-he italic font-bold" style="color: ${state.accentColor}">
+                      ${escapeHtml(state.headlineMiddle)}
+                    </span>
+                    <span class="h-[1.5px] flex-1 bg-slate-800"></span>
+                  </div>
+                  <div class="text-2xl sm:text-3xl font-serif-he font-black text-slate-900 tracking-tight">
+                    ${escapeHtml(state.headlineBottom)}
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full flex flex-col justify-between p-7 sm:p-9 relative z-10">
+                <div class="pointer-events-none absolute top-0 bottom-0 right-0 w-8 magazine-gutter-left z-30"></div>
+                ${renderChrome('left', state.pageLeftNum, state.issueDate, state.studioName, false)}
+
+                <div class="my-auto ${spreadViewMode === 'spread' ? 'mr-[-13%]' : ''} ml-2 bg-white p-3 shadow-[0_12px_38px_rgba(0,0,0,0.1)] z-20">
+                  <div class="border border-slate-300 p-5 sm:p-6">
+                    <div class="text-[10px] font-bold uppercase tracking-widest mb-1" style="color: ${state.accentColor}">
+                      ${escapeHtml(state.studentName)} // ${escapeHtml(state.role2036)}
+                    </div>
+                    <p class="text-[11.5px] sm:text-[12px] font-bold text-slate-900 leading-relaxed mb-4 pb-3 border-b border-slate-200">
+                      ${escapeHtml(state.leadParagraph)}
+                    </p>
+                    <div class="columns-2 gap-5 text-[10.8px] leading-[1.65] text-slate-700 text-justify font-serif-he ${state.dropCap ? 'hebrew-drop-cap' : ''}">
+                      ${allParas.map(p => `<p class="mb-2.5 break-inside-avoid-column">${escapeHtml(p)}</p>`).join('')}
+                    </div>
+                    <div class="mt-4 pt-2.5 border-t border-slate-200 flex items-center justify-between text-[9.5px] text-slate-500">
+                      <span class="font-bold text-slate-800">${escapeHtml(state.studioName)}</span>
+                      <span>${escapeHtml(state.studioLocation)}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-4"></div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 2: "יוצר במשרה מלאה" (FULL TIME EXPLORER)
+      // -----------------------------------------------------------------------
+      if (t === 'explorer') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-white p-7 sm:p-9 relative">
+            ${spreadViewMode === 'spread' ? `
+              <div class="pointer-events-none absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-10 magazine-gutter-right z-30"></div>
+            ` : ''}
+
+            <div class="col-span-6 pl-4">
+              ${renderChrome('right', state.pageRightNum, state.pubName, state.studentName)}
+            </div>
+            <div class="col-span-6 pr-4">
+              ${renderChrome('left', state.pageLeftNum, state.issueDate, state.studioName)}
+            </div>
+
+            <div class="col-span-12 grid grid-cols-12 gap-4 items-start my-auto">
+              <!-- Far Right Column -->
+              <div class="col-span-3 flex flex-col space-y-3 pl-2">
+                <div class="w-20 h-20 overflow-hidden bg-slate-100 border border-slate-200">
+                  <img src="${escapeHtml(state.portraitUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" />
+                </div>
+                <div class="text-[10.5px] leading-[1.6] text-slate-700 text-justify font-serif-he ${state.dropCap ? 'hebrew-gold-drop-cap' : ''}">
+                  <p class="mb-2 font-bold text-slate-900">${escapeHtml(state.leadParagraph)}</p>
+                  <p>${escapeHtml(col1Paras[0] || '')}</p>
+                </div>
+              </div>
+
+              <!-- Center 6 Columns: Spaced Typography + Flatlay Image + 2 Bottom Cols -->
+              <div class="col-span-6 flex flex-col">
+                <div class="text-center font-sans-he font-black text-sm sm:text-base tracking-[0.38em] text-slate-900 py-1.5 border-t border-slate-900">
+                  ${escapeHtml(state.spacedTop)}
+                </div>
+                <div class="w-full h-[225px] sm:h-[250px] overflow-hidden bg-slate-100 border-y border-slate-200">
+                  <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" style="${getImgStyle()}" />
+                </div>
+                <div class="text-center font-sans-he font-black text-sm sm:text-base tracking-[0.38em] text-slate-900 py-1.5 border-b border-slate-900 mb-3">
+                  ${escapeHtml(state.spacedBottom)}
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-[10.2px] leading-[1.58] text-slate-700 text-justify font-serif-he">
+                  <div>${escapeHtml(col1Paras[1] || state.subheadline)}</div>
+                  <div>${escapeHtml(col2Paras[0] || state.pullQuote)}</div>
+                </div>
+              </div>
+
+              <!-- Far Left Column -->
+              <div class="col-span-3 flex flex-col justify-end space-y-3 pr-2 pt-10">
+                <div class="text-[11px] font-bold italic border-r-2 pr-2.5 leading-snug" style="border-color: ${state.accentColor}; color: ${state.accentColor}">
+                  ${escapeHtml(state.pullQuote)}
+                </div>
+                <div class="text-[10.5px] leading-[1.6] text-slate-700 text-justify font-serif-he">
+                  <p>${escapeHtml(col2Paras[1] || col1Paras[0] || '')}</p>
+                  <p class="font-sans-he text-[9.5px] font-bold text-slate-900 mt-3 pt-2 border-t border-slate-200">
+                    ${escapeHtml(state.studentName)} • ${escapeHtml(state.studioLocation)}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 h-4"></div>
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 3: "לכל מסע יש יעד סודי" (Minimalist Secret Destinations)
+      // -----------------------------------------------------------------------
+      if (t === 'secret') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-white relative">
+            ${showRight ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-10 flex flex-col justify-between relative border-l border-slate-200">
+                <div class="pointer-events-none absolute top-0 bottom-0 left-0 w-8 magazine-gutter-right z-20"></div>
+                ${renderChrome('right', state.pageRightNum, state.pubName, state.studentName)}
+
+                <div class="my-auto pr-2 sm:pr-5 max-w-[92%]">
+                  <div class="text-[11px] font-bold uppercase tracking-widest mb-2" style="color: ${state.accentColor}">
+                    ${escapeHtml(state.studioName)} // ${escapeHtml(state.role2036)}
+                  </div>
+                  <h1 class="text-2xl sm:text-[32px] font-serif-he font-bold leading-[1.18] text-slate-900 mb-4">
+                    ${escapeHtml(state.headline)}
+                  </h1>
+                  <div class="w-48 h-[1.5px] bg-slate-800 mb-5"></div>
+                  <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-medium">
+                    ${escapeHtml(state.subheadline)}
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-5 pt-4 border-t border-slate-100 text-[10.8px] leading-[1.62] text-slate-700 text-justify font-serif-he mb-4">
+                  <div>
+                    <p class="font-bold text-slate-900 mb-1.5 font-sans-he text-[11px]">${escapeHtml(state.sectionSubheading1)}</p>
+                    <p>${escapeHtml(state.leadParagraph)}</p>
+                  </div>
+                  <div>
+                    <p>${escapeHtml(col1Paras[0] || '')}</p>
+                    <p class="mt-2">${escapeHtml(col2Paras[0] || '')}</p>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-10 flex flex-col justify-between relative">
+                <div class="pointer-events-none absolute top-0 bottom-0 right-0 w-8 magazine-gutter-left z-20"></div>
+                ${renderChrome('left', state.pageLeftNum, state.issueDate, state.studioLocation)}
+
+                <div class="flex-1 my-1 relative overflow-hidden bg-slate-100">
+                  <img src="${escapeHtml(state.secondaryImageUrl || state.imageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" style="${getImgStyle()}" />
+                  <div class="absolute bottom-3 right-3 left-3 bg-white/90 backdrop-blur-xs px-3 py-2 text-[10px] text-slate-800 flex justify-between items-center">
+                    <span>${escapeHtml(state.secondaryImageCaption)}</span>
+                    <span class="font-bold" style="color: ${state.accentColor}">2036</span>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 4: "ציר הזמן וטור אישי" (Contents & Adventure Awaits)
+      // -----------------------------------------------------------------------
+      if (t === 'contents') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-white relative">
+            ${showRight ? `
+              <div class="${colSpanClass} h-full relative overflow-hidden">
+                <div class="pointer-events-none absolute top-0 bottom-0 left-0 w-8 magazine-gutter-right z-20"></div>
+                <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="absolute inset-0 w-full h-full object-cover ${getGrayClass()}" style="${getImgStyle()}" />
+                <div class="absolute inset-0 bg-black/15"></div>
+
+                <div class="relative z-10 h-full w-[58%] mr-8 bg-white/90 backdrop-blur-md p-6 sm:p-7 flex flex-col justify-between shadow-lg">
+                  <div>
+                    <div class="text-xs font-black tracking-widest uppercase text-slate-900 border-b-2 border-slate-900 pb-2 mb-4">
+                      ציר הזמן // 2026–2036
+                    </div>
+                    <div class="space-y-3.5">
+                      ${state.milestones.map(m => `
+                        <div class="grid grid-cols-12 gap-2 items-start">
+                          <div class="col-span-3 text-base sm:text-lg font-black font-mono-he leading-none" style="color: ${state.accentColor}">
+                            ${escapeHtml(m.num)}
+                          </div>
+                          <div class="col-span-9 border-r border-slate-300 pr-2.5">
+                            <div class="text-[11px] font-extrabold text-slate-900 leading-tight">
+                              ${escapeHtml(m.year)} // ${escapeHtml(m.title)}
+                            </div>
+                            <div class="text-[9.5px] text-slate-600 leading-snug mt-0.5">
+                              ${escapeHtml(m.text)}
+                            </div>
+                          </div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                  <div class="pt-3 border-t border-slate-300 text-[10px] text-slate-600">
+                    <div class="font-bold text-slate-900">${escapeHtml(state.studioName)}</div>
+                    <div>${escapeHtml(state.studioLocation)}</div>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-9 flex flex-col justify-between relative">
+                <div class="pointer-events-none absolute top-0 bottom-0 right-0 w-8 magazine-gutter-left z-20"></div>
+                ${renderChrome('left', state.pageLeftNum, state.pubName, state.issueDate)}
+
+                <div class="grid grid-cols-12 gap-5 flex-1 my-2 items-stretch">
+                  <div class="col-span-5 flex flex-col gap-3">
+                    <div class="flex-1 overflow-hidden bg-slate-100">
+                      <img src="${escapeHtml(state.portraitUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" />
+                    </div>
+                    <div class="flex-1 overflow-hidden bg-slate-100">
+                      <img src="${escapeHtml(state.secondaryImageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" />
+                    </div>
+                  </div>
+                  <div class="col-span-7 flex flex-col justify-center text-center px-2">
+                    <h2 class="text-xl sm:text-2xl font-serif-he font-black leading-tight mb-1" style="color: ${state.accentColor}">
+                      ${escapeHtml(state.headlineTop)} ${escapeHtml(state.headlineMiddle)}
+                    </h2>
+                    <div class="text-xs font-bold text-slate-500 mb-3">${escapeHtml(state.headlineBottom)}</div>
+                    <p class="text-[10.8px] font-bold text-slate-800 leading-relaxed mb-3">${escapeHtml(state.leadParagraph)}</p>
+                    <div class="text-[10.2px] leading-[1.6] text-slate-600 space-y-2 text-justify font-serif-he">
+                      <p>${escapeHtml(col1Paras[0] || '')}</p>
+                      <p>${escapeHtml(col2Paras[0] || '')}</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 flex flex-col items-center">
+                      <span class="font-hand-he text-2xl font-bold text-slate-800 tracking-wider">${escapeHtml(state.studentName)}</span>
+                      <span class="text-[9px] text-slate-400 uppercase tracking-widest">${escapeHtml(state.role2036)}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-3"></div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 5: "מסע אל 2036" (Panoramic Full-Bleed Roadtrip)
+      // -----------------------------------------------------------------------
+      if (t === 'roadtrip') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-slate-950 text-white relative overflow-hidden">
+            <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="absolute inset-0 w-full h-full object-cover ${getGrayClass()}" style="${getImgStyle()}" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/45"></div>
+            ${spreadViewMode === 'spread' ? `<div class="pointer-events-none absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-12 magazine-gutter-right z-30"></div>` : ''}
+
+            ${showRight ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-10 flex flex-col justify-between relative z-20">
+                ${renderChrome('right', state.pageRightNum, state.pubName, state.issueDate, true)}
+                <div class="my-auto text-center px-4">
+                  <div class="inline-block px-3 py-0.5 border border-white/60 text-[10px] tracking-[0.25em] uppercase font-bold mb-2">
+                    ${escapeHtml(state.studentName)} • 2036
+                  </div>
+                  <h1 class="text-4xl sm:text-5xl font-hand-he font-bold tracking-wide text-white drop-shadow-md leading-none my-1">
+                    ${escapeHtml(state.headlineTop)} ${escapeHtml(state.headlineMiddle)} ${escapeHtml(state.headlineBottom)}
+                  </h1>
+                  <div class="w-24 h-[2px] bg-white/80 mx-auto my-3"></div>
+                  <p class="text-xs sm:text-[13px] text-white/90 max-w-md mx-auto leading-relaxed font-medium">
+                    ${escapeHtml(state.subheadline)}
+                  </p>
+                </div>
+                <div class="mb-6 bg-black/45 backdrop-blur-xs p-4 rounded border border-white/15">
+                  <div class="columns-2 gap-4 text-[10.5px] leading-[1.6] text-white/90 text-justify">
+                    <p class="mb-2 font-bold text-white">${escapeHtml(state.leadParagraph)}</p>
+                    <p>${escapeHtml(col1Paras[0] || '')}</p>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-10 flex flex-col justify-between relative z-20">
+                ${renderChrome('left', state.pageLeftNum, state.studioName, state.studioLocation, true)}
+                <div class="mt-auto mb-6 max-w-sm mr-auto bg-black/60 backdrop-blur-md p-5 border-r-4 border-white text-right space-y-2.5">
+                  <div class="text-xs font-bold text-emerald-300">${escapeHtml(state.pullQuote)}</div>
+                  <p class="text-[10.5px] text-white/85 leading-relaxed">${escapeHtml(col2Paras[0] || col1Paras[1] || '')}</p>
+                  <div class="pt-2 border-t border-white/20 text-[9.5px] text-white/70 flex justify-between">
+                    <span>${escapeHtml(state.role2036)}</span>
+                    <span>2036</span>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 6: "פסיפס תיק עבודות" (Weekend Backpack Catalog)
+      // -----------------------------------------------------------------------
+      if (t === 'backpack') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-white relative">
+            ${showRight ? `
+              <div class="${colSpanClass} h-full relative overflow-hidden flex flex-col justify-between p-7 sm:p-9 text-white">
+                <div class="pointer-events-none absolute top-0 bottom-0 left-0 w-8 magazine-gutter-right z-20"></div>
+                <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="absolute inset-0 w-full h-full object-cover ${getGrayClass()}" style="${getImgStyle()}" />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/80"></div>
+                ${renderChrome('right', state.pageRightNum, state.pubName, state.category, true)}
+
+                <div class="relative z-10 text-center mt-2">
+                  <div class="text-3xl sm:text-4xl font-hand-he font-bold text-white leading-none">
+                    ${escapeHtml(state.headlineTop)} ${escapeHtml(state.headlineMiddle)}
+                  </div>
+                  <div class="text-2xl sm:text-3xl font-display-he tracking-wider uppercase text-amber-300 -mt-1 drop-shadow">
+                    ${escapeHtml(state.headlineBottom)}
+                  </div>
+                </div>
+
+                <div class="relative z-10 mt-auto mb-6 text-center max-w-md mx-auto">
+                  <p class="text-xs font-bold text-white leading-relaxed mb-2">${escapeHtml(state.leadParagraph)}</p>
+                  <p class="text-[10.5px] text-white/80 leading-relaxed">${escapeHtml(state.subheadline)}</p>
+                </div>
+              </div>
+            ` : ''}
+
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-9 flex flex-col justify-between relative">
+                <div class="pointer-events-none absolute top-0 bottom-0 right-0 w-8 magazine-gutter-left z-20"></div>
+                ${renderChrome('left', state.pageLeftNum, state.studioName, state.issueDate)}
+
+                <div class="my-auto space-y-4">
+                  <div class="grid grid-cols-12 gap-4 items-center">
+                    <div class="col-span-4 h-28 overflow-hidden bg-slate-100">
+                      <img src="${escapeHtml(state.portraitUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" />
+                    </div>
+                    <div class="col-span-8">
+                      <h4 class="text-xs font-black uppercase mb-1" style="color: ${state.accentColor}">01 // ${escapeHtml(state.sectionSubheading1)}</h4>
+                      <p class="text-[10.5px] text-slate-700 leading-relaxed text-justify">${escapeHtml(col1Paras[0] || '')}</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-12 gap-4 items-center border-y border-slate-200 py-3.5">
+                    <div class="col-span-8">
+                      <h4 class="text-xs font-black uppercase mb-1" style="color: ${state.accentColor}">02 // ${escapeHtml(state.sectionSubheading2)}</h4>
+                      <p class="text-[10.5px] text-slate-700 leading-relaxed text-justify">${escapeHtml(col2Paras[0] || state.leadParagraph)}</p>
+                    </div>
+                    <div class="col-span-4 h-28 overflow-hidden bg-slate-100">
+                      <img src="${escapeHtml(state.secondaryImageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" />
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-3 gap-2.5 pt-1">
+                    ${state.milestones.slice(0, 3).map(m => `
+                      <div class="p-2.5 bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                        <div class="text-[10px] font-black mb-1" style="color: ${state.accentColor}">${escapeHtml(m.year)} // ${escapeHtml(m.title)}</div>
+                        <p class="text-[9.5px] text-slate-600 leading-snug">${escapeHtml(m.text)}</p>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+                <div class="h-4"></div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 7: "מניפסט טיפוגרפי (Eye)"
+      // Inspired by Eye Magazine: "There is such a thing as society*" & "first things first"
+      // -----------------------------------------------------------------------
+      if (t === 'eye_manifesto') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-[#f6f3ec] text-zinc-950 relative font-serif-he">
+            ${spreadViewMode === 'spread' ? `<div class="pointer-events-none absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-10 magazine-gutter-right z-30"></div>` : ''}
+
+            <!-- RIGHT PAGE: Top intro deck, Huge Condensed Headline with Asterisk, 3 Serif Columns, Bottom Rule-Framed Quote -->
+            ${showRight ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-9 flex flex-col justify-between relative border-l border-zinc-300">
+                <div class="grid grid-cols-12 gap-3 items-start pt-1">
+                  <div class="col-span-3 text-[10px] italic font-serif-he text-zinc-700">
+                    מאת: ${escapeHtml(state.studentName)}<br/>
+                    <span class="not-italic font-sans-he text-[9px] text-zinc-500">${escapeHtml(state.role2036)}</span>
+                  </div>
+                  <div class="col-span-9 text-[12.5px] sm:text-[13.5px] font-serif-he leading-[1.35] text-zinc-900 font-medium">
+                    ${escapeHtml(state.subheadline)}
+                  </div>
+                </div>
+
+                <!-- Giant Condensed Statement Headline with Asterisk (*) -->
+                <div class="my-2 pr-[18%]">
+                  <h1 class="font-sans-he font-black text-4xl sm:text-[54px] leading-[0.94] tracking-tight text-zinc-950">
+                    ${escapeHtml(state.headline)}
+                  </h1>
+                </div>
+
+                <!-- 3 Justified Serif Columns -->
+                <div class="grid grid-cols-3 gap-4 text-[10px] leading-[1.52] text-zinc-800 text-justify font-serif-he my-auto">
+                  <div>
+                    <p class="mb-2">${escapeHtml(state.leadParagraph)}</p>
+                    <p>${escapeHtml(col1Paras[0] || '')}</p>
+                  </div>
+                  <div>
+                    <p class="mb-2">${escapeHtml(col1Paras[1] || col2Paras[0] || '')}</p>
+                    <p>${escapeHtml(state.a1 || '')}</p>
+                  </div>
+                  <div>
+                    <p>${escapeHtml(col2Paras[0] || '')}</p>
+                    <p class="mt-2">${escapeHtml(col2Paras[1] || state.a2 || '')}</p>
+                  </div>
+                </div>
+
+                <!-- Bottom Asterisk Callout Framed Between Horizontal Rules -->
+                <div class="mt-3 pt-1">
+                  <div class="mr-[18%] border-t-2 border-b-2 border-zinc-900 py-2">
+                    <div class="font-sans-he text-lg sm:text-xl font-normal tracking-tight text-zinc-950 leading-tight">
+                      *${escapeHtml(state.pullQuote)}
+                    </div>
+                    <div class="font-sans-he italic text-[11px] text-zinc-700 mt-0.5">
+                      ${escapeHtml(state.studentName)}, ${escapeHtml(state.studioName)} — ${escapeHtml(state.issueDate)}
+                    </div>
+                  </div>
+                  <div class="mt-2 text-[9px] font-sans-he font-bold text-zinc-600">
+                    ${escapeHtml(state.pageRightNum)} EYE 2036
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- LEFT PAGE: Top 3 Columns with Center Rule-Sandwiched Callout + Bottom Black Manifesto Block ("קודם כל מה שחשוב") -->
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full p-7 sm:p-9 flex flex-col justify-between relative">
+                <!-- Top Half: 3 Columns with Middle Uppercase/Bold Callout Between Rules -->
+                <div class="grid grid-cols-3 gap-4 text-[9.8px] leading-[1.5] text-zinc-800 text-justify font-serif-he h-[48%] overflow-hidden">
+                  <div>
+                    <p>${escapeHtml(col1Paras[0] || state.leadParagraph)}</p>
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="border-t-2 border-b-2 border-zinc-950 py-2 mb-2 font-sans-he font-bold text-[11.5px] leading-[1.22] text-right uppercase tracking-tight text-zinc-950">
+                      ${escapeHtml(state.pullQuote)}
+                    </div>
+                    <p>${escapeHtml(state.a1 || '')}</p>
+                  </div>
+                  <div>
+                    <p>${escapeHtml(col2Paras[0] || '')}</p>
+                    <p class="mt-1.5">${escapeHtml(state.a2 || '')}</p>
+                  </div>
+                </div>
+
+                <!-- Bottom Half: Iconic "first things first" Black & Cream Manifesto Box -->
+                <div class="h-[49%] bg-zinc-950 text-[#f6f3ec] p-4 grid grid-cols-12 gap-3 items-stretch">
+                  <!-- Right Black Column with Footnote -->
+                  <div class="col-span-3 flex flex-col justify-end text-[8.5px] leading-[1.4] text-zinc-300 font-serif-he border-l border-zinc-800 pl-2">
+                    <p>
+                      1. מניפסט "${escapeHtml(state.studioName)}" פורסם לראשונה בשנת 2026 כפרויקט סטודנטים, ומוצג כעת ב-2036 במהדורה מחודשת.
+                    </p>
+                    <div class="mt-3 text-[8.5px] font-sans-he font-bold text-zinc-400">
+                      ${escapeHtml(state.pageLeftNum)} EYE 2036
+                    </div>
+                  </div>
+
+                  <!-- Inner Cream Box with Giant Stacked Condensed Type + Manifesto Signatories -->
+                  <div class="col-span-9 bg-[#f6f3ec] text-zinc-950 p-3.5 grid grid-cols-12 gap-3 items-center">
+                    <div class="col-span-6 font-condensed-he font-bold text-5xl sm:text-[64px] leading-[0.82] tracking-tight text-zinc-950 select-none">
+                      קודם כל<br/>מה<br/>שחשוב
+                    </div>
+                    <div class="col-span-6 text-[8.2px] leading-[1.38] font-sans-he text-zinc-800 space-y-1.5 text-justify">
+                      <div class="font-bold text-zinc-950 border-b border-zinc-400 pb-0.5">מניפסט 2036 // ${escapeHtml(state.studentName)}</div>
+                      <p>${escapeHtml(state.leadParagraph.slice(0, 180))}...</p>
+                      <div class="grid grid-cols-2 gap-1 pt-1 text-[7.5px] font-bold text-zinc-700">
+                        <div>${escapeHtml(state.studentName)}<br/>${escapeHtml(state.studioName)}</div>
+                        <div>${escapeHtml(state.studioLocation)}<br/>אוקטובר 2036</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 8: "גריד ארכיון (Eye)"
+      // Inspired by Eye Magazine Whitechapel Gallery Archive Spread
+      // -----------------------------------------------------------------------
+      if (t === 'eye_archive') {
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-white text-zinc-900 relative font-sans-he">
+            ${spreadViewMode === 'spread' ? `<div class="pointer-events-none absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-10 magazine-gutter-right z-30"></div>` : ''}
+
+            <!-- RIGHT PAGE: Archival Poster Grid (Blue/Yellow "OPEN." poster + Red poster + Numbered Captions 20-26) -->
+            ${showRight ? `
+              <div class="${colSpanClass} h-full p-6 sm:p-8 flex flex-col justify-between relative border-l border-zinc-200">
+                <!-- Top Poster Row -->
+                <div class="grid grid-cols-12 gap-3 h-[37%]">
+                  <!-- Top Right Dual Poster -->
+                  <div class="col-span-5 grid grid-cols-2 border border-zinc-200 overflow-hidden">
+                    <div class="bg-[#f3efe6] p-2.5 flex flex-col justify-between text-right">
+                      <div class="text-[7px] text-zinc-500 uppercase">${escapeHtml(state.studioName)}</div>
+                      <div class="font-sans-he font-black text-[12px] leading-[1.08] text-zinc-900 uppercase">
+                        המראות והקולות של ${escapeHtml(state.studioLocation)} בגלריית 2036
+                      </div>
+                      <div class="text-[7px] text-zinc-600">${escapeHtml(state.issueDate)}</div>
+                    </div>
+                    <div class="relative overflow-hidden bg-zinc-900">
+                      <img src="${escapeHtml(state.portraitUrl)}" crossorigin="anonymous" class="w-full h-full object-cover grayscale contrast-125" />
+                    </div>
+                  </div>
+
+                  <!-- Iconic Bright Blue Poster with Giant Yellow Typography ("OPEN.") -->
+                  <div class="col-span-7 bg-[#0072ce] p-3.5 flex flex-col justify-between text-white relative overflow-hidden">
+                    <div class="flex justify-between text-[7.5px] uppercase tracking-wider text-white/85">
+                      <span>${escapeHtml(state.studioName)}</span>
+                      <span>תערוכת רטרוספקטיבה 2026–2036</span>
+                    </div>
+                    <div class="font-sans-he font-black text-4xl sm:text-[54px] text-[#ffd100] tracking-tight leading-none my-auto text-center">
+                      .OPEN 36
+                    </div>
+                    <div class="text-[9px] font-bold tracking-widest uppercase text-center border-t border-white/30 pt-1">
+                      ${escapeHtml(state.studentName)} // ${escapeHtml(state.role2036)}
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Middle Row: 6 Small Numbered Museum Caption Columns (20-25) -->
+                <div class="grid grid-cols-5 gap-2.5 py-2.5 text-[7.8px] leading-[1.35] text-zinc-800 font-sans-he">
+                  ${state.milestones.map((m, i) => `
+                    <div>
+                      <span class="font-bold text-zinc-950">${20 + i} (${m.year}) ${escapeHtml(m.title)}:</span>
+                      <span> ${escapeHtml(m.text)}</span>
+                    </div>
+                  `).join('')}
+                </div>
+
+                <!-- Bottom Row: Dark Exhibition Photo on Right + Bold Red/Orange Poster ("Mario Merz" style) on Left -->
+                <div class="grid grid-cols-12 gap-3 h-[42%]">
+                  <div class="col-span-5 flex flex-col justify-between">
+                    <div class="h-[72%] bg-zinc-900 overflow-hidden relative">
+                      <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" />
+                    </div>
+                    <div class="pt-1.5 border-b-2 border-zinc-900 pb-1">
+                      <div class="text-[10px] font-black text-zinc-950 leading-tight">${escapeHtml(state.headlineTop)} ${escapeHtml(state.headlineBottom)}</div>
+                      <div class="text-[7.5px] text-zinc-500">${escapeHtml(state.imageCaption)}</div>
+                    </div>
+                  </div>
+
+                  <div class="col-span-7 grid grid-cols-12 gap-2">
+                    <!-- Folded Brochure Mockup -->
+                    <div class="col-span-12 h-[34%] bg-[#e9e4d8] border border-zinc-300 p-2 grid grid-cols-3 gap-1.5">
+                      <div class="bg-white p-1.5 text-[7px] font-bold flex flex-col justify-between">
+                        <span>קטלוג 2036</span>
+                        <span class="text-[9px] font-black">${escapeHtml(state.studentName)}</span>
+                      </div>
+                      <div class="overflow-hidden"><img src="${escapeHtml(state.secondaryImageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover grayscale" /></div>
+                      <div class="bg-white p-1.5 text-[6.8px] text-zinc-600 leading-tight overflow-hidden">${escapeHtml(state.leadParagraph.slice(0, 90))}</div>
+                    </div>
+                    <!-- Red/Orange Exhibition Poster -->
+                    <div class="col-span-12 h-[63%] bg-[#d92b1c] text-white p-3.5 flex flex-col justify-between relative overflow-hidden">
+                      <div class="text-[8.5px] font-bold text-[#ffd100] text-left">${escapeHtml(state.issueDate)} // ${escapeHtml(state.studioName)}</div>
+                      <div class="font-sans-he font-black text-xl sm:text-2xl text-[#ffd100] leading-none">
+                        ${escapeHtml(state.studentName)}
+                      </div>
+                      <div class="text-[9px] text-white/90 leading-snug max-w-[85%]">
+                        ${escapeHtml(state.pullQuote)}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-[8.5px] font-bold text-zinc-500 pt-1">${escapeHtml(state.pageRightNum)} EYE ARCHIVE</div>
+              </div>
+            ` : ''}
+
+            <!-- LEFT PAGE: Continuous Interview Q&A Column on Right + Stacked Catalog Spread Mockups on Left -->
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full p-6 sm:p-8 flex flex-col justify-between relative">
+                <div class="grid grid-cols-12 gap-5 flex-1 items-stretch">
+                  <!-- Right Column (5 cols): Continuous Interview Q&A with Bold Questions -->
+                  <div class="col-span-5 text-[9.5px] leading-[1.48] font-serif-he text-zinc-800 text-justify flex flex-col justify-between border-l border-zinc-200 pl-3">
+                    <div class="space-y-2">
+                      <div class="font-sans-he font-black text-[11px] text-zinc-950 border-b border-zinc-900 pb-1">
+                        ראיון ארכיון // ${escapeHtml(state.studentName)}
+                      </div>
+                      <p class="font-sans-he font-bold text-zinc-950">${escapeHtml(state.q1)}</p>
+                      <p>${escapeHtml(state.a1)}</p>
+                      <p>${escapeHtml(col1Paras[0] || '')}</p>
+                      <p class="font-sans-he font-bold text-zinc-950 pt-1">${escapeHtml(state.q2)}</p>
+                      <p>${escapeHtml(state.a2)}</p>
+                      <p>${escapeHtml(col2Paras[0] || '')}</p>
+                    </div>
+                    <div class="text-[8.5px] font-sans-he font-bold text-zinc-400 pt-2">
+                      ארכיון עבודות 2026–2036 • ${escapeHtml(state.studioLocation)}
+                    </div>
+                  </div>
+
+                  <!-- Left Column (7 cols): Stacked Miniature Book/Catalog Spread Mockups -->
+                  <div class="col-span-7 flex flex-col justify-between space-y-3">
+                    <!-- Mini Spread 1 -->
+                    <div class="bg-zinc-100 border border-zinc-300 p-2 grid grid-cols-2 gap-2 shadow-xs h-[31%]">
+                      <div class="bg-zinc-900 overflow-hidden">
+                        <img src="${escapeHtml(state.imageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover grayscale contrast-125" />
+                      </div>
+                      <div class="bg-white p-2.5 flex flex-col justify-center">
+                        <div class="font-sans-he font-black text-[11px] uppercase leading-tight text-zinc-950 border-b-2 border-zinc-900 pb-1 mb-1">
+                          ${escapeHtml(state.sectionSubheading1)}
+                        </div>
+                        <p class="text-[7.5px] text-zinc-600 leading-relaxed">${escapeHtml(state.subheadline.slice(0, 120))}</p>
+                      </div>
+                    </div>
+
+                    <!-- Mini Spread 2 -->
+                    <div class="bg-zinc-100 border border-zinc-300 p-2 grid grid-cols-2 gap-2 shadow-xs h-[31%]">
+                      <div class="bg-white p-2 grid grid-cols-2 gap-1.5 items-end">
+                        <img src="${escapeHtml(state.portraitUrl)}" crossorigin="anonymous" class="w-full h-16 object-cover grayscale" />
+                        <p class="text-[7px] text-zinc-600 leading-tight">${escapeHtml(state.leadParagraph.slice(0, 95))}</p>
+                      </div>
+                      <div class="bg-white p-2 grid grid-cols-2 gap-1.5">
+                        <p class="text-[7px] text-zinc-600 leading-tight">${escapeHtml(col1Paras[0]?.slice(0, 95) || '')}</p>
+                        <img src="${escapeHtml(state.secondaryImageUrl)}" crossorigin="anonymous" class="w-full h-16 object-cover grayscale" />
+                      </div>
+                    </div>
+
+                    <!-- Bottom Row: Square Exhibition Cover + Caption 26-27 -->
+                    <div class="grid grid-cols-12 gap-3 h-[32%] items-start">
+                      <div class="col-span-7 h-full bg-zinc-900 border-b-4 border-[#d92b1c] relative overflow-hidden">
+                        <img src="${escapeHtml(state.secondaryImageUrl)}" crossorigin="anonymous" class="w-full h-full object-cover grayscale contrast-125" />
+                        <div class="absolute top-2 right-2 bg-black/80 text-white text-[7.5px] px-1.5 py-0.5 font-bold">
+                          ${escapeHtml(state.studioName)}
+                        </div>
+                      </div>
+                      <div class="col-span-5 text-[7.8px] leading-[1.38] text-zinc-700 font-sans-he">
+                        <span class="font-bold text-zinc-950">26–27 קטלוג התערוכה (${escapeHtml(state.issueDate)}):</span>
+                        ${escapeHtml(state.secondaryImageCaption)} ${escapeHtml(state.pullQuote)}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-[8.5px] font-bold text-zinc-500 text-left pt-1">EYE ARCHIVE ${escapeHtml(state.pageLeftNum)}</div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // TEMPLATE 9: "פנזין גראנג׳ (Plastikcomb)"
+      // Inspired by Plastikcomb Spread: Expressive Brush Strokes, Outlined Questions in Black Boxes,
+      // Spaced Statement, Typewriter Body with Hand Strikethroughs, and 180° Rotated Left Page
+      // -----------------------------------------------------------------------
+      if (t === 'plastikcomb') {
+        const leftPageRotation = state.plastikFlippedUpright ? '' : 'rotate-180';
+        container.innerHTML = `
+          <div class="w-full h-full grid grid-cols-12 bg-[#f3f1ec] text-zinc-950 relative overflow-hidden font-mono-he">
+            <!-- Expressive SVG Brush Strokes & Grunge Marks Behind Layout -->
+            <svg class="pointer-events-none absolute inset-0 w-full h-full z-0 opacity-90" viewBox="0 0 1200 850" fill="none">
+              <path d="M580 70 C 420 65, 250 110, 190 290 C 130 470, 290 540, 595 520" stroke="#18181b" stroke-width="26" stroke-linecap="round"/>
+              <path d="M80 780 L 1120 795" stroke="#18181b" stroke-width="18"/>
+              <path d="M540 0 L 535 850" stroke="#18181b" stroke-width="22"/>
+              <circle cx="115" cy="180" r="85" stroke="#18181b" stroke-width="4" stroke-dasharray="12 8"/>
+              <path d="M620 220 C 700 190, 790 250, 740 310 C 690 370, 610 330, 670 280" stroke="#18181b" stroke-width="3"/>
+            </svg>
+
+            ${spreadViewMode === 'spread' ? `<div class="pointer-events-none absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-12 magazine-gutter-right z-30"></div>` : ''}
+
+            <!-- RIGHT PAGE: Black Question Banner + Giant Brutalist Statement + Typewriter Text with Scribbled Strikethrough -->
+            ${showRight ? `
+              <div class="${colSpanClass} h-full p-6 sm:p-8 flex flex-col justify-between relative z-10 border-l border-zinc-400">
+                <!-- Top Black Box with Hollow Outlined Question Text -->
+                <div class="bg-zinc-950 p-4 sm:p-5 shadow-md">
+                  <div class="font-sans-he font-bold text-base sm:text-[19px] leading-[1.18] tracking-wide uppercase outline-text-white">
+                    ${escapeHtml(state.q1)}
+                  </div>
+                </div>
+
+                <!-- Middle White Cutout Strip with Giant Spaced-Out Brutalist Statement ("I WORK WITH MY INSTINCT...") -->
+                <div class="bg-white/95 p-4 border border-zinc-300 shadow-xs my-1 relative">
+                  <h1 class="font-sans-he font-bold text-2xl sm:text-[31px] leading-[1.12] tracking-[0.14em] text-zinc-950 uppercase">
+                    ${escapeHtml(state.headline)}
+                  </h1>
+                  <div class="flex items-center justify-between mt-2 pt-1 border-t border-zinc-200">
+                    <span class="text-[10px] font-mono-he font-bold text-emerald-700 tracking-widest">PCM Q/A 03 // 2036</span>
+                    <span class="text-[10px] font-mono-he text-zinc-500">${escapeHtml(state.studentName)}</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Cutout Paper with Typewriter Paragraphs & Hand-Drawn Strikethrough Lines -->
+                <div class="bg-white/95 p-4 sm:p-5 border border-zinc-300 text-[9.8px] leading-[1.55] font-mono-he text-zinc-900 space-y-2.5 relative shadow-xs">
+                  <p>${escapeHtml(state.leadParagraph)}</p>
+                  <p class="relative">
+                    ${escapeHtml(col1Paras[0] || '')}
+                    <!-- Authentic Plastikcomb Hand-Drawn Strikethrough Line -->
+                    <span class="block w-[75%] h-[1.5px] bg-zinc-900 my-1 transform -rotate-1"></span>
+                  </p>
+                  <p>${escapeHtml(col1Paras[1] || state.a1 || '')}</p>
+                  <div class="text-[8.5px] font-bold text-zinc-500 pt-1 flex justify-between">
+                    <span>${escapeHtml(state.studioName)} // ${escapeHtml(state.studioLocation)}</span>
+                    <span>PAGE ${escapeHtml(state.pageRightNum)}</span>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- LEFT PAGE: Authentically Rotated 180° (Upside-Down) Collage Like Plastikcomb Reference! -->
+            ${showLeft ? `
+              <div class="${colSpanClass} h-full p-6 sm:p-8 flex flex-col justify-between relative z-10 transition-transform duration-500 ${leftPageRotation}">
+                <!-- Top Typewriter Reflection Block -->
+                <div class="bg-white/95 p-3.5 border border-zinc-300 text-[9.5px] leading-[1.5] font-mono-he text-zinc-900 shadow-xs">
+                  <p>${escapeHtml(col2Paras[0] || state.a2)}</p>
+                  <div class="flex justify-between items-center mt-2 text-[9.5px] font-bold text-emerald-700">
+                    <span>PCM Q/A 05</span>
+                    <span class="text-zinc-950 text-xs tracking-widest uppercase">${escapeHtml(state.studentName)}</span>
+                  </div>
+                </div>
+
+                <!-- Middle Collage: Portrait Cutout + Black Outlined Question Box -->
+                <div class="grid grid-cols-12 gap-3 my-1 items-center">
+                  <div class="col-span-5 h-44 bg-zinc-900 p-1.5 border-2 border-zinc-900 shadow-md relative overflow-hidden">
+                    <img src="${escapeHtml(state.portraitUrl)}" crossorigin="anonymous" class="w-full h-full object-cover ${getGrayClass()}" />
+                  </div>
+                  <div class="col-span-7 bg-zinc-950 p-4 shadow-md">
+                    <div class="font-sans-he font-bold text-sm sm:text-[16px] leading-[1.2] tracking-wide uppercase outline-text-white">
+                      ${escapeHtml(state.q2)}
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Lower Typewriter Block + Bottom Black Banner -->
+                <div class="space-y-2">
+                  <div class="bg-white/95 p-3 border border-zinc-300 text-[9.2px] leading-[1.48] font-mono-he text-zinc-900">
+                    <p>${escapeHtml(state.a2)}</p>
+                    <div class="text-[9px] font-bold text-emerald-700 mt-1">PCM Q/A 04 // ${escapeHtml(state.issueDate)}</div>
+                  </div>
+                  <div class="bg-zinc-950 p-3.5">
+                    <div class="font-sans-he font-bold text-xs sm:text-sm leading-tight tracking-wider uppercase outline-text-white">
+                      ${escapeHtml(state.pullQuote)}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>
